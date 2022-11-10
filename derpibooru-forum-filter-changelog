@@ -1,4 +1,5 @@
-// Changelog: 0.931:   Code cleanup for publishing.
+// Changelog: 0.933: Minor comment and metadata edits.
+//            0.931: Code cleanup for publishing.
 //            0.93:  Bugfix for the sidebar and Notifications (the script doesn't filter a thread if the last poster is anonymous)
 //            0.92:  Added Main page sidebar support.
 //            0.91:  Reworked the replacement function to remove redundant lines from the 'notifications page' part of the code.
