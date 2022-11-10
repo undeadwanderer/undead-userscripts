@@ -1,0 +1,14 @@
+// Changelog: 0.93:  Bugfix for the sidebar and Notifications (the script doesn't filter a thread if the last poster is anonymous)
+//            0.92:  Added Main page sidebar support.
+//            0.91:  Reworked the replacement function to remove redundant lines from the 'notifications page' part of the code.
+//            0.905: Testing removal of redundant lines from the 'notifications page' part of the code.
+//            0.9:   Added Notifications page support.
+//            0.82:  Testing Notifications page support.
+//            0.81:  Code cleanup.
+//            0.8:   First fully working version; only board list and thread list pages are supported.
+
+// Upcoming features:
+// Main page (sidebar) support - in progress (not enough unique selectors, have to figure out a workaround).
+// Profile pages support - TBD.
+// Support for multiple filter words - may be implemented but not a priority.
+// Forum search page support - unlikely to be implemented in this script because they show posts instead of threads. More likely, it will be implemented in a separate script for post hiding.
