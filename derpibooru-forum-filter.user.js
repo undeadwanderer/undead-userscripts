@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Derpibooru Thread Filter testing version
-// @description  Attempt to make the forums a little more worksafe by spoilering thread titles containing "NSFW". Made for personal use. May get false positives ("No NSFW"-type titles, etc.).
-// @version      0.932
+// @description  An attempt to make the forums a little more work-friendly by spoilering thread titles containing "NSFW". Made for personal use. May get false positives ("No NSFW"-type titles, etc.).
+// @version      0.933
 // @namespace    https://derpibooru.org/profiles/Pink%2BAmena
 // @include      /^https?://(www\.)?(derpi|trixie)booru\.org/.*$/
 // @include      https://ronxgr5zb4dkwdpt.onion/*
