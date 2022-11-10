@@ -7,6 +7,6 @@ Releases: I don't use github and I have no idea what I am doing, I just needed t
 
 **derpibooru-forum-filter** — Spoilers forum topics with "NSFW" in title on Derpibooru (didn't implement it for all pages).
 
-**derpibooru-upload-tag** — Fills in "safe" tag on new uploads on Derpibooru (doesn't always work).
+**derpibooru-upload-tag** — Fills in a "safe" tag on the new upload screen on Derpibooru (doesn't always work).
 
 **eqd-page-title-cleanup** — Retitles Equestria Daily's pages to be more convenient for bookmarking.
