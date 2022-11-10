@@ -1,5 +1,5 @@
 # Undead Usersctipts
-Some very bad and unfinished userscripts I made a while ago
+Some very bad and unfinished userscripts I made back in 2018. Basically baby's first (and last) userscripts.
 
 **derpibooru-forum-filter** Spoilers forum topics with "NSFW" in title on Derpibooru (didn't implement it for all pages).
 
