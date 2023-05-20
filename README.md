@@ -9,4 +9,4 @@ Releases: I don't use github and I have no idea what I am doing, I just needed t
 
 **derpibooru-upload-tag** — Fills in a "safe" tag on the new upload screen on Derpibooru (doesn't always work).
 
-**eqd-page-title-cleanup** — Retitles Equestria Daily's pages for convenience.
+**eqd-page-title-cleanup** — Retitles Equestria Daily's pages for readability and more convenient bookmarking.
