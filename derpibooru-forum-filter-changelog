@@ -1,16 +1,17 @@
-// Changelog: 0.933: Minor comment and metadata edits.
-//            0.931: Code cleanup for publishing.
-//            0.93:  Bugfix for the sidebar and Notifications (the script doesn't filter a thread if the last poster is anonymous)
-//            0.92:  Added Main page sidebar support.
+// Changelog: 0.94a: Quick bugfix (script was not working on /forums page if any last post boxes are empty (i.e. a post has been deleted)).
+//            0.94:  Added /activity; Small code rewrites; Updated class selector for Notifications.
+//            0.93a: Bugfix (Anon posts in the sidebar still didn't work as intended in Firefox (plaintext code is enclosed in quotes in Opera but turned out not to be in FF)).
+//            0.93:  Bugfix for the sidebar and Notifications (the script didn't filter a thread if the last poster was anonymous).
+//            0.92:  Added Main page sidebar support [might be redundant because 'nsfw' seems to be filtered by default in the sidebar, might be useful for future keyword additions though].
 //            0.91:  Reworked the replacement function to remove redundant lines from the 'notifications page' part of the code.
-//            0.905: Testing removal of redundant lines from the 'notifications page' part of the code.
 //            0.9:   Added Notifications page support.
 //            0.82:  Testing Notifications page support.
 //            0.81:  Code cleanup.
 //            0.8:   First fully working version; only board list and thread list pages are supported.
 
-// Upcoming features:
+// Considered future features:
 // Main page (sidebar) support - in progress (not enough unique selectors, have to figure out a workaround).
 // Profile pages support - TBD.
 // Support for multiple filter words - may be implemented but not a priority.
-// Forum search page support - unlikely to be implemented in this script because they show posts instead of threads. More likely, it will be implemented in a separate script for post hiding.
+// Forum search page support - unlikely to be implemented in this script because they show posts instead of threads.
+// JSON fetching of the current board list - maybe? (if possible?)
