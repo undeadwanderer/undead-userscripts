@@ -1,17 +1,21 @@
-// Changelog: 0.94a: Quick bugfix (script was not working on /forums page if any last post boxes are empty (i.e. a post has been deleted)).
-//            0.94:  Added /activity; Small code rewrites; Updated class selector for Notifications.
-//            0.93a: Bugfix (Anon posts in the sidebar still didn't work as intended in Firefox (plaintext code is enclosed in quotes in Opera but turned out not to be in FF)).
-//            0.93:  Bugfix for the sidebar and Notifications (the script didn't filter a thread if the last poster was anonymous).
-//            0.92:  Added Main page sidebar support [might be redundant because 'nsfw' seems to be filtered by default in the sidebar, might be useful for future keyword additions though].
-//            0.91:  Reworked the replacement function to remove redundant lines from the 'notifications page' part of the code.
-//            0.9:   Added Notifications page support.
-//            0.82:  Testing Notifications page support.
-//            0.81:  Code cleanup.
-//            0.8:   First fully working version; only board list and thread list pages are supported.
+// Changelog: 0.95b / 2024-02-18: Added Marker's Derpi4U script/library for the settings userface, the downside is that it doesn't allow array options so I've had to set a limited number of fields (5).
+//                                Inform me if more filter words are needed and I'll adjust the script.
+//            0.95a / 2024-02-18: Filter words list no longer requires regex values.
+//            0.95  / 2024-02-18: Added support for multiple filter words [currently only accessible by modifying the variable directly].
+//            0.94a / 2024-02-06: Bugfix (script was not working on /forums page if any last post boxes are empty (i.e. a post has been deleted)).
+//            0.94:               Added /activity; Small code rewrites; Updated class selector for Notifications.
+//            0.93a:              Bugfix (Anon posts in the sidebar still didn't work as intended in Firefox (plaintext code is enclosed in quotes in Opera but turned out not to be in FF)).
+//            0.93:               Bugfix for the sidebar and Notifications (the script didn't filter a thread if the last poster was anonymous).
+//            0.92:               Added Main page sidebar support [might be redundant because 'nsfw' seems to be filtered by default in the sidebar, might be useful for future keyword additions though].
+//            0.91:               Reworked the replacement function to remove redundant lines from the 'notifications page' part of the code.
+//            0.9:                Added Notifications page support.
+//            0.82:               Testing Notifications page support.
+//            0.81:               Code cleanup.
+//            0.8:                First fully working version; only board list and thread list pages are supported.
 
 // Considered future features:
-// Main page (sidebar) support - in progress (not enough unique selectors, have to figure out a workaround).
 // Profile pages support - TBD.
-// Support for multiple filter words - may be implemented but not a priority.
-// Forum search page support - unlikely to be implemented in this script because they show posts instead of threads.
+// Support for multiple filter words - implemented as of 0.95 but may need improvement.
+// GUI and local storage for filters.
+// Forum search and user's forum history pages support - unlikely to be implemented in this script because they show posts instead of threads.
 // JSON fetching of the current board list - maybe? (if possible?)
