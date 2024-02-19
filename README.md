@@ -5,7 +5,7 @@ License: Everything is under Creative Commons BY-NC-SA 4.0, forum filter links M
 
 Releases: Open the script code and click "raw", your script manager should recognize it.
 
-**derpibooru-forum-filter** — Spoilers forum topics with "NSFW" in the title on Derpibooru (haven't implemented it for all pages yet). [Upd. 2024-02-18: Due to as of now using Mark Taiwan's gui library for the settings, <u>REQUIRES Violentmonkey</u> if using Firefox. Said settings can be found in the "Userscripts" tab on the Settings page.]
+**derpibooru-forum-filter** — Spoilers forum topics with "NSFW" in the title on Derpibooru (haven't implemented it for all pages yet). [Upd. 2024-02-18: Due to as of now using Mark Taiwan's gui library for the settings, __requires Violentmonkey__ if you're on Firefox. Said settings can be found in the "Userscripts" tab on the Settings page.]
 
 **derpibooru-upload-tag** — Fills in a "safe" tag on the new upload screen on Derpibooru (doesn't always work).
 
