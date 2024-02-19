@@ -1,4 +1,5 @@
-// Changelog: 0.95b / 2024-02-18: Added Marker's Derpi4U script/library for the settings userface, the downside is that it doesn't allow array options so I've had to set a limited number of fields (5).
+// Changelog: 0.95c / 2024-02-19: Figured out how to use a single textbox for all the filter words.
+//            0.95b / 2024-02-18: Added Marker's Derpi4U script/library for the settings userface, the downside is that it doesn't allow array options so I've had to set a limited number of fields (5).
 //                                Inform me if more filter words are needed and I'll adjust the script.
 //            0.95a / 2024-02-18: Filter words list no longer requires regex values.
 //            0.95  / 2024-02-18: Added support for multiple filter words [currently only accessible by modifying the variable directly].
@@ -16,6 +17,12 @@
 // Considered future features:
 // Profile pages support - TBD.
 // Support for multiple filter words - implemented as of 0.95 but may need improvement.
-// GUI and local storage for filters.
+// GUI and local storage for filters. - implemented as of 0.95b but uses the library's local storage.
 // Forum search and user's forum history pages support - unlikely to be implemented in this script because they show posts instead of threads.
 // JSON fetching of the current board list - maybe? (if possible?)
+
+// Reminder of currently supported pages:
+// Board list / Forums main page
+// Board pages / Thread lists
+// Main/Activity page with sidebar on
+// Notifications
