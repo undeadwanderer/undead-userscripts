@@ -12,11 +12,11 @@ Features:
 
 * Filter by blog: Open the blog list (/blogs) and check blogs you don't like under the "Фильтровать" column.
 * Filter by user: Open the user profile and in the right column there are gonna be two radio switches, for comments (options: "Show all", "Hide images", "Hide comments") and for blog posts ("Show posts" and "Hide posts"). Hidden comments can be shown or downvoted.
-* Settings: In the blog view, there's a new link "Фильтры" in the right column, you can remove filtered blogs and users from there as well as the options above.
+* Settings: In blog view, there's a new link "Фильтры" in the right column, you can remove filtered blogs and users from there as well as the options above.
 
 Changelog: 
 
-1.16: Initial fork commit, added an option to filter blog posts by user, also added checks so the posts won't be hidden under certain circumstances (when viewing the blocked blog (user filter will still apply) or post directly, or browsing all posts made by a user).
+* 1.16: Initial fork commit, added an option to filter blog posts by user, also added checks so the posts won't be hidden under certain circumstances (when viewing the blocked blog (user filter will still apply) or post directly, or browsing all posts made by a user).
 
 Feature ideas:
 
@@ -40,7 +40,7 @@ Feature ideas:
 
 Ченджлог: 
 
-1.16: Мой первый коммит в этот форк, добавил возможность фильтровать блог-посты от определённых пользователей, также добавил проверки чтобы посты не скрывались при просмотре профилей, индивидуальных постов, и блогов (в последнем случае фильтр пользователей продолжает применяться).
+* 1.16: Мой первый коммит в этот форк, добавил возможность фильтровать блог-посты от определённых пользователей, также добавил проверки чтобы посты не скрывались при просмотре профилей, индивидуальных постов, и блогов (в последнем случае фильтр пользователей продолжает применяться).
 
 На будущее:
 
