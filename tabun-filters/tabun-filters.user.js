@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name         Tabun Filters Fork
-// @author       CAHCET | Undead Wanderer
-// @namespace    https://derpibooru.org/profiles/Pink%2BAmena
-// @description  Ignores for blogs and comments
-// @require      https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js
-// @include      /https?://tabun\.everypony\.(ru|org|info)/.*/
-// @version      1.16
-// @grant        GM_getValue
-// @grant        GM_setValue
-// @run-at       document-start
+// @name           Tabun Filters Fork
+// @author         CAHCET | Undead Wanderer
+// @namespace      https://derpibooru.org/profiles/Pink%2BAmena
+// @description    Ignores for blogs and comments
+// @require        https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js
+// @include        /https?://tabun\.everypony\.(ru|org|info)/.*/
+// @version        1.17 | 2024-03-16
+// @grant          GM_getValue
+// @grant          GM_setValue
+// @run-at         document-start
 // ==/UserScript==
 
 
@@ -348,8 +348,65 @@ function main() {
 		commentsObserver.observe($("#comments")[0], obsConfig);
 	}
 
+	if (document.location.pathname.split('/')[1] === 'blog') { // insert buttons into blog pages
 
-	if (document.location.pathname.split('/')[1] === 'profile') {
+		var blogName = document.location.pathname.split('/')[2];
+
+		var ignoredBlogs = GM_getValue("blockedBlogs", []);
+
+		var $blogDescMini = $('#blog-mini');
+		var $blogDescFooter = $('#blog-footer');
+
+		var $f = document.querySelector('[id^=button-blog-join-first]');
+		var $g = document.querySelector('[id^=button-blog-join-second]');
+
+		var $blogIgnore1 = $('<button id="button-blog-ignore-first" class="button button-small" data-only-text="1" type="submit" data-button-additional="button-blog-ignore-second" ' + (ignoredBlogs.indexOf(blogName) === -1 ? 'value="0">Фильтровать блог' : 'value="1">Перестать фильтровать') + '</button>');
+		var $blogIgnore2 = $('<button id="button-blog-ignore-second" class="button button-small" data-only-text="1" type="submit" data-button-additional="button-blog-ignore-first" ' + (ignoredBlogs.indexOf(blogName) === -1 ? 'value="0">Фильтровать блог' : 'value="1">Перестать фильтровать') + '</button>');
+
+		$blogIgnore1.insertAfter($f);
+		$blogIgnore2.insertAfter($g);
+		$blogIgnore1.click(function() {
+			ignoredBlogs = GM_getValue("blockedBlogs", []);
+			if ($blogIgnore1[0].value === "0") {
+				$blogIgnore1[0].value = "1";
+				$blogIgnore1[0].innerHTML = "Перестать фильтровать";
+				$blogIgnore2[0].value = "1";
+				$blogIgnore2[0].innerHTML = "Перестать фильтровать";
+				ignoredBlogs.push(blogName);
+				GM_setValue("blockedBlogs", ignoredBlogs);
+			} else if ($blogIgnore1[0].value === "1") {
+				$blogIgnore1[0].value = "0";
+				$blogIgnore1[0].innerHTML = "Фильтровать блог";
+				$blogIgnore2[0].value = "0";
+				$blogIgnore2[0].innerHTML = "Фильтровать блог";
+				ignoredBlogs.splice(ignoredBlogs.indexOf(blogName), 1);
+				GM_setValue("blockedBlogs", ignoredBlogs);
+			}
+		});
+
+		$blogIgnore2.click(function() {
+			ignoredBlogs = GM_getValue("blockedBlogs", []);
+			if ($blogIgnore2[0].value === "0") {
+				$blogIgnore1[0].value = "1";
+				$blogIgnore1[0].innerHTML = "Перестать фильтровать";
+				$blogIgnore2[0].value = "1";
+				$blogIgnore2[0].innerHTML = "Перестать фильтровать";
+				ignoredBlogs.push(blogName);
+				GM_setValue("blockedBlogs", ignoredBlogs);
+			} else if ($blogIgnore2[0].value === "1") {
+				$blogIgnore1[0].value = "0";
+				$blogIgnore1[0].innerHTML = "Фильтровать блог";
+				$blogIgnore2[0].value = "0";
+				$blogIgnore2[0].innerHTML = "Фильтровать блог";
+				ignoredBlogs.splice(ignoredBlogs.indexOf(blogName), 1);
+				GM_setValue("blockedBlogs", ignoredBlogs);
+			}
+		});
+
+
+	}
+
+	if (document.location.pathname.split('/')[1] === 'profile') { // profile switches
 		setStyles();
 
 		var userName = $(".user-login").text().trim();
@@ -569,7 +626,7 @@ function renderSettings() {
 	$blockedAuthors.appendTo($settings);
 	$settings.append('<br>');
 
-var $blockedAuthorsPosts = $('<ul><h4>Заблокированные авторы (посты):</h4></ul>');
+  var $blockedAuthorsPosts = $('<ul><h4>Заблокированные авторы (посты):</h4></ul>');
 	$blockedAuthorsPosts.hide();
 	for (var author in blockedAuthorsPosts) {
 		if (blockedAuthorsPosts.hasOwnProperty(author)) {
