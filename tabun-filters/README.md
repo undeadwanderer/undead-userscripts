@@ -24,7 +24,7 @@ Changelog:
 Feature ideas:
 
 * Looking into filtering by tags but that's not gonna be easy since the original author removed all code concerning tag support when they abandoned it (and I didn't save an older version).
-* Have a vague idea to implement hiding individual posts by id.
+* Got a vague idea to implement hiding individual posts by id.
 
 ---
 ### Russian
