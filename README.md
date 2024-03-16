@@ -7,6 +7,6 @@ Releases: Open the script code and click "raw", your script manager should recog
 
 **derpibooru-forum-filter** — Spoilers forum topics with "NSFW" in the title on Derpibooru (haven't implemented it for all pages yet). [Upd. 2024-02-18: Due to as of now using Mark Taiwan's gui library for the settings, __requires Violentmonkey__ if you're on Firefox. Said settings can be found in the "Userscripts" tab on the Settings page.]
 
-**derpibooru-upload-tag** — Fills in a "safe" tag on the new upload screen on Derpibooru (doesn't always work).
+**derpibooru-upload-tag** — Fills in a "safe" tag on the new upload screen on Derpibooru (~~doesn't always work~~should work now).
 
 **eqd-page-title-cleanup** — Retitles Equestria Daily's pages for convenience.
