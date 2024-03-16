@@ -4,7 +4,7 @@
 
 ### English
 
-A userscript for filtering out blog posts and comments on tabun.everypony.ru website.
+A userscript for filtering out blog posts and comments on My Little Pony fansite tabun.everypony.ru.
 
 This is a fork of an old script by CAHCET who abandoned it back in 2016.
 
@@ -24,11 +24,12 @@ Changelog:
 Feature ideas:
 
 * Looking into filtering by tags but that's not gonna be easy since the original author removed all code concerning tag support when they abandoned it (and I didn't save an older version).
+* Have a vague idea to implement hiding individual posts by id.
 
 ---
 ### Russian
 
-Юзерскрипт для фильтрации комментариев и постов на Табуне.
+Юзерскрипт для фильтрации комментариев и постов на брони-коллективном блоге Табуне.
 
 Форк давно заброшенного скрипта за авторством САНСЕТ.
 
@@ -48,3 +49,4 @@ Feature ideas:
 На будущее:
 
 * Рассматриваю возможность сделать фильтрацию по тегам но т.к. автор удалил из последней версии весь сопутствующий поддержке тегов код это будет непросто.
+* Есть смутная идея научить скрипт фильтровать индивидуальные посты по id.
