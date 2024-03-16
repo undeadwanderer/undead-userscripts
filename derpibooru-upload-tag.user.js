@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Derpibooru Default Rating Tag
-// @description  Automatically adds the "safe" tag at the upload page. Made for personal use. ATM, if using fancy tags, the tag may require to be 'confirmed'.
+// @description  Automatically adds the "safe" tag at the upload page. Made for personal use.
 // @version      0.6 | 2024-03-16
 // @namespace    https://derpibooru.org/profiles/Pink%2BAmena
 // @include      /^https?://(www\.)?(derpi|trixie)booru\.org/images/new$/
