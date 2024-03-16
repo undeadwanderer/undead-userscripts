@@ -1,5 +1,7 @@
 # Tabun Filters
 
+[Описание на русском](#russian)
+
 ### English
 
 A userscript for filtering out blog posts and comments on tabun.everypony.ru website.
