@@ -8,7 +8,7 @@ A userscript for filtering out blog posts and comments on tabun.everypony.ru web
 
 This is a fork of an old script by CAHCET who abandoned it back in 2016.
 
-License: The original author distributed it under WTFPL license and I'm not changing that.
+License: The original author distributed it under WTFPL license and I'm not changing that (for now, at least).
 
 Features: 
 
@@ -32,7 +32,7 @@ Feature ideas:
 
 Форк давно заброшенного скрипта за авторством САНСЕТ.
 
-Лицензия: WTFPL (делайте что хотите), автор оставил код под этой лицензией и я не буду это менять.
+Лицензия: WTFPL (делайте что хотите), автор оставил код под этой лицензией и я не буду это менять (по крайней мере, пока).
 
 Функции:
 
