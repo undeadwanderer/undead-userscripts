@@ -1,16 +1,16 @@
 // ==UserScript==
-// @name           Tabun Filters Fork
+// @name           Tabun Filters
 // @author         CAHCET | Undead Wanderer
 // @namespace      https://derpibooru.org/profiles/Pink%2BAmena
 // @description    Ignores for blogs and comments
 // @require        https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js
-// @include        /https?://tabun\.everypony\.(ru|org|info)/.*/
-// @version        1.17 | 2024-03-16
+// @include        /https?://tabun\.everypony\.(ru|org|info|com|online)/.*/
+// @match          https://tabun.me/*
+// @version        1.17.1 | 2024-03-16
 // @grant          GM_getValue
 // @grant          GM_setValue
 // @run-at         document-start
 // ==/UserScript==
-
 
 if (document.location.pathname === '/filters/' ||
 	document.location.pathname === '/filters') {
