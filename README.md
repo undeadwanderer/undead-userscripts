@@ -9,7 +9,7 @@ Open the script code and click "raw", your script manager should recognize it.
 
 ### Scripts in this repo:
 
-!NEW! **tabun-filters** — Post and comment filters for the MLP fansite tabun.everypony.ru. Fork of a defunct userscript by SAHCET. More information can be found at the script's folder.
+!NEW! **tabun-filters** — Post and comment filters for the MLP fansite tabun.everypony.ru. Fork of an abandoned userscript by SAHCET. See the script's folder for more information.
 
 **derpibooru-forum-filter** — Spoilers forum topics with "NSFW" in the title on Derpibooru (haven't implemented it for all pages yet). [Upd. 2024-02-18: Due to as of now using Mark Taiwan's gui library for the settings, __requires Violentmonkey__ if you're on Firefox. Said settings can be found in the "Userscripts" tab on the Settings page.]
 
