@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Derpibooru Default Rating Tag
+// @name         Derpibooru Default Rating Tag Legacy Version
 // @author       undead_wanderer
 // @description  Automatically adds the "safe" tag at the upload page. Made for personal use.
 // @version      0.6 | 2024-03-16
