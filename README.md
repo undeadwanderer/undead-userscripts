@@ -5,6 +5,8 @@ License: Everything is under Creative Commons BY-NC-SA 4.0, forum filter and the
 
 Installation: Open the script code and click "raw", your script manager should recognize it.
 
+**tabun-filters** — Post and comment filters for the MLP fansite tabun.everypony.ru. More information can be found at the script's folder.
+
 **derpibooru-forum-filter** — Spoilers forum topics with "NSFW" in the title on Derpibooru (haven't implemented it for all pages yet). [Upd. 2024-02-18: Due to as of now using Mark Taiwan's gui library for the settings, __requires Violentmonkey__ if you're on Firefox. Said settings can be found in the "Userscripts" tab on the Settings page.]
 
 **derpibooru-upload-tag** — Automatically fills in tags of your choice on the image upload page on Derpibooru, as of now uses Mark Taiwan's library so the note on the script above applies.
