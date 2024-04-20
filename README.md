@@ -1,5 +1,5 @@
 # Undead Usersctipts
-Some very bad and unfinished userscripts I either made back in ealy 2018 or forked recently. Basically baby's first (and last) userscripts. These weren't the only scripts I made by then but these three are confirmed to work presently.
+Some userscripts I either made back in early 2018 [Basically baby's first userscripts] or forked recently. These weren't the only scripts I made at the time but these are confirmed to work presently and which I intend to support.
 
 ### License:
 Everything except for **tabun-filters** is under **Creative Commons BY-NC-SA 4.0**, **tabun-filters** is under **WTFPL**.
