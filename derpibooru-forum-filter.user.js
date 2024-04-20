@@ -2,12 +2,12 @@
 // @name         Derpibooru Thread Filter
 // @author       Undead_Wanderer
 // @description  An attempt to make the forums a little more worksafe by spoilering thread titles containing "NSFW". Made for personal use. May get false positives ("No NSFW"-type titles, etc.).
-// @version      0.95c / 2024-02-19
+// @version      0.95d / 2024-04-20
 // @namespace    https://derpibooru.org/profiles/Pink%2BAmena
 // @License      Creative Commons BY-NC-SA 4.0
 // @include      /^https?://(www\.)?(derpi|trixie)booru\.org/.*$/
 // @include      https://ronxgr5zb4dkwdpt.onion/*
-// @require      https://raw.githubusercontent.com/marktaiwan/Derpibooru-Unified-Userscript-Ui/master/derpi-four-u.js
+// @require      https://raw.githubusercontent.com/undeadwanderer/Derpibooru-Unified-Userscript-Ui/master/derpi-four-u.js
 // @inject-into  content
 // @grant        none
 
@@ -25,13 +25,13 @@ var config = ConfigManager(
     'Spoiler NSFW thread titles and/or any other words you don’t want to see in there.'
 );
 config.registerSetting({
-        title: 'Filter words',
-        key: 'marker0',
-        description: 'The words you wish to filter. Case-insensitive. Separate with commas.',
-        type: 'text',
-        defaultValue: 'nsfw, nfsw, not safe for work'
+    title: 'Filter words',
+    key: 'marker0',
+    description: 'The words you wish to filter. Case-insensitive. Separate with commas.',
+    type: 'textarea',
+    defaultValue: 'nsfw\nnfsw\nnot safe for work'
     })
-var markerWords = config.getEntry('marker0').split(/, */); // Derpi4U-reliant variable for filter words list.
+var markerWords = config.getEntry('marker0').replace(/(\s*\n\s*)/g,'\n').split(/\n+/); // Derpi4U-reliant variable for filter words list, multiline edition. Ignores empty lines.
 
 // get blocks with thread topics:
 if (window.location.pathname === "/forums") {        //checks if the current page is the board list
