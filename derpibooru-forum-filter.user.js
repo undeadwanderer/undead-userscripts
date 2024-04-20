@@ -4,7 +4,7 @@
 // @description  An attempt to make the forums a little more worksafe by spoilering thread titles containing "NSFW". Made for personal use. May get false positives ("No NSFW"-type titles, etc.).
 // @version      0.95d / 2024-04-20
 // @namespace    https://derpibooru.org/profiles/Pink%2BAmena
-// @License      Creative Commons BY-NC-SA 4.0
+// @license      Creative Commons BY-NC-SA 4.0
 // @include      /^https?://(www\.)?(derpi|trixie)booru\.org/.*$/
 // @include      https://ronxgr5zb4dkwdpt.onion/*
 // @require      https://raw.githubusercontent.com/undeadwanderer/Derpibooru-Unified-Userscript-Ui/master/derpi-four-u.js
