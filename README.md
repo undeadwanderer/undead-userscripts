@@ -1,7 +1,7 @@
 # Undead Usersctipts
 Some very bad and unfinished userscripts I made back in 2018. Basically baby's first (and last) userscripts. These weren't the only scripts I made by then but these three are confirmed to work presently.
 
-License: Everything is under Creative Commons BY-NC-SA 4.0, forum filter and the new default tag scripts link Mark Taiwan's Derpi4U library, licensed under MIT license, as a requirement.
+License: Everything except for **tabun-filters** is under **Creative Commons BY-NC-SA 4.0**, **tabun-filters** is under **WTFPL**.
 
 Installation: Open the script code and click "raw", your script manager should recognize it.
 
