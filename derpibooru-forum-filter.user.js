@@ -21,7 +21,7 @@ var l = 0; //var for various length values
 // Derpi4U stuff goes here
 var config = ConfigManager(
     'Derpibooru Thread Filter',
-    'script_id',
+    'thread_filter',
     'Spoiler NSFW thread titles and/or any other words you don’t want to see in there.'
 );
 config.registerSetting({

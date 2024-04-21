@@ -2,7 +2,7 @@
 // @name         Derpibooru Default Upload Tags
 // @author       undead_wanderer
 // @description  Automatically adds the "safe" tag at the upload page. Made for personal use.
-// @version      0.7.1 | 2024-04-13
+// @version      0.7.2 | 2024-04-21
 // @namespace    https://derpibooru.org/profiles/Pink%2BAmena
 // @license      CC BY-NC-SA 4.0
 // @include      /^https?://(www\.)?(derpi|trixie)booru\.org/(images/new|settings/edit)/
@@ -17,7 +17,7 @@
 // configuration things
 var config = ConfigManager (
   'Derpibooru Default Upload Tags',
-  'script_id',
+  'upload_tags',
   'Automatically add tags to the upload page.'
 );
 config.registerSetting ({
@@ -25,7 +25,7 @@ config.registerSetting ({
   key: 'defaultTags',
   description: 'Tags you want to see on the upload page by default. Separate with commas.',
   type: 'text',
-  defaultValue: 'safe, pony'
+  defaultValue: 'safe'
 });
 
 if (window.location.pathname === '/images/new') {

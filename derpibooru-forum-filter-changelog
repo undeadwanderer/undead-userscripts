@@ -1,4 +1,5 @@
-// Changelog: 0.95d / 2024-04-20: Replaced Derpi4U library with a fork that supports multiline text areas; split the filter words with newline;
+// Changelog: 0.95e / 2024-04-21: Fixed the script sharing config id with my other scripts.
+//            0.95d / 2024-04-20: Replaced Derpi4U library with a fork that supports multiline text areas; split the filter words with newline;
 //                                Resetting the settings to default first things first is highly recommended.
 //            0.95c / 2024-02-19: Figured out how to use a single textbox for all the filter words.
 //            0.95b / 2024-02-18: Added Marker's Derpi4U script/library for the settings userface, the downside is that it doesn't allow array options so I've had to set a limited number of fields (5).
