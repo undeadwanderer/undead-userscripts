@@ -8,7 +8,7 @@
 // @include      /^https?://(www\.)?(derpi|trixie)booru\.org/(images/new|settings/edit)/
 // @include      /^https?://ronxgr5zb4dkwdpt\.onion/(images/new|settings/edit)/
 // @require      https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js
-// @require      https://raw.githubusercontent.com/marktaiwan/Derpibooru-Unified-Userscript-Ui/master/derpi-four-u.js
+// @require      https://raw.githubusercontent.com/undeadwanderer/Derpibooru-Unified-Userscript-Ui/master/derpi-four-u.js
 // @inject-into  content
 // @grant        none
 
