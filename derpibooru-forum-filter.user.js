@@ -2,7 +2,7 @@
 // @name         Derpibooru Thread Filter
 // @author       Undead_Wanderer
 // @description  An attempt to make the forums a little more worksafe by spoilering thread titles containing "NSFW". Made for personal use. May get false positives ("No NSFW"-type titles, etc.).
-// @version      0.95d / 2024-04-20
+// @version      0.95f / 2024-04-22
 // @namespace    https://derpibooru.org/profiles/Pink%2BAmena
 // @license      Creative Commons BY-NC-SA 4.0
 // @include      /^https?://(www\.)?(derpi|trixie)booru\.org/.*$/
