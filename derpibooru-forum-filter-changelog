@@ -1,4 +1,5 @@
-// Changelog: 0.95e / 2024-04-21: Fixed the script sharing config id with my other scripts.
+// Changelog: 0.95f / 2024-04-22: Typo fix in Derpi4U config id declaration. Note that it means that the settings have been reset because of this, back them up before updating.
+//            0.95e / 2024-04-21: Fixed the script sharing config id with my other scripts.
 //            0.95d / 2024-04-20: Replaced Derpi4U library with a fork that supports multiline text areas; split the filter words with newline;
 //                                Resetting the settings to default first things first is highly recommended.
 //            0.95c / 2024-02-19: Figured out how to use a single textbox for all the filter words.
