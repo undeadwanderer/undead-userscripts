@@ -24,14 +24,13 @@ This userscript spoilers forum topics which contain certain filter words or phra
 ```
 1.00  / 2024-04-26: A complete code rewrite - the script is now much more optimized and
                     checks all the forum links on any page of Derpibooru.
-1.00% :             Legacy version of 1.0 + uses the original Derpi4U library.
-1.00* :             Legacy version of 1.0 + doesn't require Derpi4U, the filter words are to be edited in code.
+1.00% / 〃:         Legacy version of 1.0 + uses the original Derpi4U library.
+1.00* / 〃:         Legacy version of 1.0 + doesn't require Derpi4U, the filter words are to be edited in code.
 0.95f / 2024-04-22: Typo fix in Derpi4U config id declaration.
                     Note that it means that the settings have been reset because of this, back them up before updating.
 0.95e / 2024-04-21: Fixed the script sharing config id with my other scripts.
-0.95d / 2024-04-20: Replaced Derpi4U library with a fork that supports multiline text areas.
-                    Split the filter words with newline.
-                    Resetting the settings to default first things first after updatin is highly recommended.
+0.95d / 2024-04-20: Replaced Derpi4U library with a fork that supports multiline text areas; split the filter words with newline;
+                    Resetting the settings to default first things first is highly recommended.
 0.95c / 2024-02-19: Figured out how to use a single textbox for all the filter words.
 0.95b / 2024-02-18: Added Marker's Derpi4U script/library for the settings userface.
                     The downside is that it doesn't allow array options so I've had to set a limited number of fields (5).
@@ -46,8 +45,8 @@ This userscript spoilers forum topics which contain certain filter words or phra
                     (plaintext code is enclosed in quotes in Opera but turned out not to be in FF)).
 0.93:               Bugfix for the sidebar and Notifications
                     (the script didn't filter a thread if the last poster was anonymous).
-0.92:               Added Main page sidebar support [might be redundant because 'nsfw' seems to be filtered by default in the sidebar,
-                    might be useful for future keyword additions though].
+0.92:               Added Main page sidebar support [might be redundant because 'nsfw' seems to be filtered by default
+                    in the sidebar,might be useful for future keyword additions though].
 0.91:               Reworked the replacement function to remove redundant lines from the 'notifications page' part of the code.
 0.9:                Added Notifications page support.
 0.82:               Testing Notifications page support.
