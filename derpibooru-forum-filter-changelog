@@ -1,4 +1,7 @@
-// Changelog: 0.95f / 2024-04-22: Typo fix in Derpi4U config id declaration. Note that it means that the settings have been reset because of this, back them up before updating.
+// Changelog: 1.00  / 2024-04-26: A complete code rewrite - the script is now much more optimized and checks all the forum links on any page of Derpibooru.
+//            1.00% :             Legacy version of 1.0 + uses the original Derpi4U library.
+//            1.00* :             Legacy version of 1.0 + doesn't require Derpi4U, the filter words are to be edited in code.
+//            0.95f / 2024-04-22: Typo fix in Derpi4U config id declaration. Note that it means that the settings have been reset because of this, back them up before updating.
 //            0.95e / 2024-04-21: Fixed the script sharing config id with my other scripts.
 //            0.95d / 2024-04-20: Replaced Derpi4U library with a fork that supports multiline text areas; split the filter words with newline;
 //                                Resetting the settings to default first things first is highly recommended.
@@ -19,14 +22,9 @@
 //            0.8:                First fully working version; only board list and thread list pages are supported.
 
 // Considered future features:
-// Profile pages support - TBD.
+// Word escapes so you can make filter exceptions ("No NSFW" topics etc.).
+// Profile pages support - TBD. - done as of 1.0.
 // Support for multiple filter words - implemented as of 0.95 but may need improvement.
 // GUI and local storage for filters. - implemented as of 0.95b but uses the library's local storage.
 // Forum search and user's forum history pages support - unlikely to be implemented in this script because they show posts instead of threads.
-// JSON fetching of the current board list - maybe? (if possible?)
-
-// Reminder of currently supported pages:
-// Board list / Forums main page
-// Board pages / Thread lists
-// Main/Activity page with sidebar on
-// Notifications
+// JSON fetching of the current board list - maybe? (if possible?) - not required as of 1.0.
