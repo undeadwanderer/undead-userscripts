@@ -4,7 +4,7 @@
 
 ## English
 
-A userscript for filtering out blog posts and comments on My Little Pony fansite tabun.everypony.ru.
+A userscript for filtering out blog posts and comments on the My Little Pony fansite tabun.everypony.ru.
 
 This is a fork of an old script by CAHCET who abandoned it back in 2016.
 
