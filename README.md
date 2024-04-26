@@ -1,4 +1,4 @@
-# Undead Usersctipts
+# Undead Userscripts
 Some userscripts I either made back in early 2018 [Basically baby's first userscripts] or forked recently. These weren't the only scripts I made at the time but these are confirmed to work presently and which I intend to continue supporting.
 
 ### License:
