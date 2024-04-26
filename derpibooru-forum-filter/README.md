@@ -29,19 +29,25 @@ This userscript spoilers forum topics which contain certain filter words or phra
 0.95f / 2024-04-22: Typo fix in Derpi4U config id declaration.
                     Note that it means that the settings have been reset because of this, back them up before updating.
 0.95e / 2024-04-21: Fixed the script sharing config id with my other scripts.
-0.95d / 2024-04-20: Replaced Derpi4U library with a fork that supports multiline text areas; split the filter words with newline;
-                    Resetting the settings to default first things first is highly recommended.
+0.95d / 2024-04-20: Replaced Derpi4U library with a fork that supports multiline text areas.
+                    Split the filter words with newline.
+                    Resetting the settings to default first things first after updatin is highly recommended.
 0.95c / 2024-02-19: Figured out how to use a single textbox for all the filter words.
 0.95b / 2024-02-18: Added Marker's Derpi4U script/library for the settings userface.
                     The downside is that it doesn't allow array options so I've had to set a limited number of fields (5).
                     Inform me if more filter words are needed and I'll adjust the script.
 0.95a / 2024-02-18: Filter words list no longer requires regex values.
-0.95  / 2024-02-18: Added support for multiple filter words [currently only accessible by modifying the variable directly].
-0.94a / 2024-02-06: Bugfix (script was not working on /forums page if any last post boxes are empty (i.e. a post has been deleted)).
+0.95  / 2024-02-18: Added support for multiple filter words
+                    [currently only accessible by modifying the variable directly].
+0.94a / 2024-02-06: Bugfix (script was not working on /forums page if any last post boxes are empty
+                    (i.e. a post has been deleted)).
 0.94:               Added /activity; Small code rewrites; Updated class selector for Notifications.
-0.93a:              Bugfix (Anon posts in the sidebar still didn't work as intended in Firefox (plaintext code is enclosed in quotes in Opera but turned out not to be in FF)).
-0.93:               Bugfix for the sidebar and Notifications (the script didn't filter a thread if the last poster was anonymous).
-0.92:               Added Main page sidebar support [might be redundant because 'nsfw' seems to be filtered by default in the sidebar, might be useful for future keyword additions though].
+0.93a:              Bugfix (Anon posts in the sidebar still didn't work as intended in Firefox
+                    (plaintext code is enclosed in quotes in Opera but turned out not to be in FF)).
+0.93:               Bugfix for the sidebar and Notifications
+                    (the script didn't filter a thread if the last poster was anonymous).
+0.92:               Added Main page sidebar support [might be redundant because 'nsfw' seems to be filtered by default in the sidebar,
+                    might be useful for future keyword additions though].
 0.91:               Reworked the replacement function to remove redundant lines from the 'notifications page' part of the code.
 0.9:                Added Notifications page support.
 0.82:               Testing Notifications page support.
