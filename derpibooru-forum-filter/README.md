@@ -14,7 +14,7 @@ This userscript spoilers forum topics which contain certain filter words or phra
 
 ### Installation:
 
-- Open the file of the version of the script you'd prefer to use and click "raw", your userscript version should recognize it.
+- Open the file of the version of the script you'd prefer to use and click "raw", your userscript manager should recognize it.
 
 ### Known issues:
 
