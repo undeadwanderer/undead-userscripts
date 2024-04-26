@@ -15,7 +15,7 @@ Open the script code and click "raw", your script manager should recognize it.
 
 - **derpibooru-upload-tag** — Automatically fills in tags of your choice on the image upload page on Derpibooru, as of now uses Mark Taiwan's library so the note on the script above applies.
 
-  - Known issue for the two scripts above - due to now using a modified version of the library and said libraty using the CSS styles imposed by the version loaded first they need to be ordered to initialize first (idk if Tampermonkey supports load order customization but Violentmonkey does, you should use the latter anyway).
+  - Known issue for the two scripts above - due to now using a modified version of the library and said library using the CSS styles imposed by the version loaded first they need to be ordered to initialize first (idk if Tampermonkey supports load order customization but Violentmonkey does, you should use the latter anyway).
 
 - **derpibooru-upload-tag-legacy** — Fills in a "safe" tag on the new image upload page on Derpibooru. An older version of the script above that doesn't rely on Mark Taiwan's library or needs Violentmonkey to use on Firefox at the exchange of customizability (you can still edit the values in the code itself though).
 
