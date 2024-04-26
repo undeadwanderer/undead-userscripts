@@ -24,3 +24,8 @@ Open the script code and click "raw", your script manager should recognize it.
 `A known issue for the non-legacy versions of the two scripts above - due to now using a modified version of the library and said library using the CSS styles imposed by the version loaded first they need to be ordered to initialize first (idk if Tampermonkey supports load order customization but Violentmonkey does, you should use the latter anyway).`
 
 - **eqd-page-title-cleanup** — Retitles Equestria Daily's pages for convenience.
+
+### Credits:
+
+- [Mark Taiwan a.k.a Marker](https://github.com/marktaiwan) for **Derpibooru Unified Userscript UI Utility** library.
+- [Rene_Z](https://github.com/ReneZeidler) and [stsyn](https://github.com/stsyn) for **Tag Suggestions** userscript; I referenced the code for use in the current version of **upload-tag**.
