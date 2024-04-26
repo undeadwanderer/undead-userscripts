@@ -23,7 +23,7 @@ This userscript spoilers forum topics which contain certain filter words or phra
 ### Change Log:
 ```
 1.00  / 2024-04-26: A complete code rewrite - the script is now much more optimized and
-                    checks all the forum links on any page of Derpibooru.
+                    parses all forum links on any page of Derpibooru.
 1.00% / 〃:         Legacy version of 1.0 + uses the original Derpi4U library.
 1.00* / 〃:         Legacy version of 1.0 + doesn't require Derpi4U, the filter words are to be edited in code.
 0.95f / 2024-04-22: Typo fix in Derpi4U config id declaration.
@@ -60,5 +60,5 @@ This userscript spoilers forum topics which contain certain filter words or phra
 - ~~Profile pages support~~ - done as of 1.0.
 - ~~Support for multiple filter words~~ - implemented as of 0.95 but may need improvement.
 - ~~GUI and local storage for filters~~ - implemented as of 0.95b but uses the library's local storage.
-- ~~Forum search and user's forum history pages support~~ - ~~unlikely to be implemented in this script because they show posts instead of threads.~~ Version 1.0 filters all forum urls.
+- ~~Forum search and user's forum history pages support~~ - ~~unlikely to be implemented in this script because they show posts instead of threads.~~ Version 1.0 parses all forum urls.
 - ~~JSON fetching of the current board list - maybe? (if possible?)~~ - not required as of 1.0.
