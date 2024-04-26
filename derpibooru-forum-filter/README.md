@@ -62,3 +62,6 @@ This userscript spoilers forum topics which contain certain filter words or phra
 - ~~GUI and local storage for filters~~ - implemented as of 0.95b but uses the library's local storage.
 - ~~Forum search and user's forum history pages support~~ - ~~unlikely to be implemented in this script because they show posts instead of threads.~~ Version 1.0 parses all forum urls.
 - ~~JSON fetching of the current board list - maybe? (if possible?)~~ - not required as of 1.0.
+
+Credits:
+- Mark Taiwan for the **Derpibooru Unified Userscript UI Utility** library.
