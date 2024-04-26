@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Derpibooru Thread Filter test
+// @name         Derpibooru Thread Filter
 // @author       Undead_Wanderer
 // @description  An attempt to make the forums a little more worksafe by spoilering thread titles containing "NSFW". Made for personal use. May get false positives ("No NSFW"-type titles, etc.).
 // @version      1.00 / 2024-04-26
