@@ -13,7 +13,7 @@
 
 const markerWords = ["NSFW", "NFSW", "Not safe for work"]; //filter words
 
-let  x = document.querySelectorAll("a[href*='/forums/']");
+let x = document.querySelectorAll("a[href*='/forums/']");
 
 markerWords.forEach(function(item, index, arr){
     for (let i of x) {
