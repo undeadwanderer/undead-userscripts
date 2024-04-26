@@ -31,7 +31,7 @@ config.registerSetting({
 
 let markerWords = config.getEntry('marker0').replace(/(\s*\n\s*)/g,'\n').split(/\n+/); // Derpi4U-reliant variable for filter words list, multiline edition.
 
-let  x = document.querySelectorAll("a[href*='/forums/']");
+let x = document.querySelectorAll("a[href*='/forums/']");
 
 markerWords.forEach(function(item, index, arr){
     for (let i of x) {
