@@ -22,15 +22,18 @@ This userscript spoilers forum topics which contain certain filter words or phra
 
 ### Change Log:
 ```
-1.00  / 2024-04-26: A complete code rewrite - the script is now much more optimized and checks all the forum links on any page of Derpibooru.
+1.00  / 2024-04-26: A complete code rewrite - the script is now much more optimized and
+                    checks all the forum links on any page of Derpibooru.
 1.00% :             Legacy version of 1.0 + uses the original Derpi4U library.
 1.00* :             Legacy version of 1.0 + doesn't require Derpi4U, the filter words are to be edited in code.
-0.95f / 2024-04-22: Typo fix in Derpi4U config id declaration. Note that it means that the settings have been reset because of this, back them up before updating.
+0.95f / 2024-04-22: Typo fix in Derpi4U config id declaration.
+                    Note that it means that the settings have been reset because of this, back them up before updating.
 0.95e / 2024-04-21: Fixed the script sharing config id with my other scripts.
 0.95d / 2024-04-20: Replaced Derpi4U library with a fork that supports multiline text areas; split the filter words with newline;
                     Resetting the settings to default first things first is highly recommended.
 0.95c / 2024-02-19: Figured out how to use a single textbox for all the filter words.
-0.95b / 2024-02-18: Added Marker's Derpi4U script/library for the settings userface, the downside is that it doesn't allow array options so I've had to set a limited number of fields (5).
+0.95b / 2024-02-18: Added Marker's Derpi4U script/library for the settings userface.
+                    The downside is that it doesn't allow array options so I've had to set a limited number of fields (5).
                     Inform me if more filter words are needed and I'll adjust the script.
 0.95a / 2024-02-18: Filter words list no longer requires regex values.
 0.95  / 2024-02-18: Added support for multiple filter words [currently only accessible by modifying the variable directly].
