@@ -13,6 +13,10 @@ Open the script code and click "raw", your script manager should recognize it.
 
 - **derpibooru-forum-filter** — Spoilers forum topics with "NSFW" (or any other words you don't wish to see) in the title on Derpibooru (still a wip project since I haven't implemented the support for all applicable page types yet). [Upd. 2024-02-18: Due to as of now using Mark Taiwan's gui library for the settings, __requires Violentmonkey__ if you're on Firefox. Said settings can be found in the "Userscripts" tab on the Settings page.]
 
+  - **derpibooru-forum-filter-1.0-derpi4u-legacy** — A version of the script above that uses the unmodified gui library.
+
+  - **derpibooru-forum-filter-1.0-legacy** — A version of the scripts above that doesn't require any libraries, the filter words array is editable in the code.
+
 - **derpibooru-upload-tag** — Automatically fills in tags of your choice on the image upload page on Derpibooru, as of now uses Mark Taiwan's library so the note on the script above applies.
 
   - Known issue for the two scripts above - due to now using a modified version of the library and said library using the CSS styles imposed by the version loaded first they need to be ordered to initialize first (idk if Tampermonkey supports load order customization but Violentmonkey does, you should use the latter anyway).
