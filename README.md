@@ -28,4 +28,4 @@ Open the script code and click "raw", your script manager should recognize it.
 ### Credits:
 
 - [Mark Taiwan a.k.a Marker](https://github.com/marktaiwan) for **Derpibooru Unified Userscript UI Utility** library.
-- [Rene_Z](https://github.com/ReneZeidler) and [stsyn](https://github.com/stsyn) for **Tag Suggestions** userscript; I referenced the code for use in the current version of **upload-tag**.
+- [Rene_Z](https://github.com/ReneZeidler) and [stsyn](https://github.com/stsyn) for **Tag Suggestions** userscript; I referenced the code while making the current version of **upload-tag**.
