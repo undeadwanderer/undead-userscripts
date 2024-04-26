@@ -1,5 +1,5 @@
 # Undead Userscripts
-Some userscripts I either made back in early 2018 [Basically baby's first userscripts] or forked recently. These weren't the only scripts I made at the time but these are confirmed to work presently and which I intend to continue supporting.
+Some JS I either made back in early 2018 [Basically baby's first scripts] or forked recently. These weren't the only scripts I made at the time but these are confirmed to work presently and which I intend to continue supporting.
 
 ### License:
 Everything except for **tabun-filters** is under **Creative Commons BY-NC-SA 4.0**, **tabun-filters** is under **WTFPL** as of how the original coder left it.
