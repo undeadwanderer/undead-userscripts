@@ -25,7 +25,7 @@ The original author distributed it under the WTFPL license and I'm not changing 
 1.16   | 2024-03-15: Initial fork commit, added an option to filter blog posts by user, also added checks so the posts won't be hidden under certain circumstances (when viewing the blocked blog (user filter will still apply) or post directly, or browsing all posts made by a user).
 ```
 
-### Feature ideas:
+### Possible future features:
 
 * Looking into filtering by tags but that's not gonna be easy since the original author removed all code concerning tag support when they abandoned it (and I didn't save an older version).
 * Got a vague idea to implement hiding individual posts by id.
@@ -54,7 +54,7 @@ WTFPL (делайте что хотите), автор оставил код п�
 1.16   | 2024-03-15: Мой первый коммит в этот форк, добавлены возможность фильтровать блог-посты от определённых пользователей, а также проверки чтобы посты не скрывались при просмотре профилей, индивидуальных постов, и блогов (в последнем случае фильтр пользователей продолжает применяться).
 ```
 
-### На будущее:
+### Возможные идеи на будущее:
 
 * Рассматриваю возможность сделать фильтрацию по тегам но т.к. автор удалил из последней версии весь сопутствующий поддержке тегов код это будет непросто.
 * Есть смутная идея научить скрипт фильтровать индивидуальные посты по id.
