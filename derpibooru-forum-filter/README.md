@@ -1,7 +1,7 @@
 # Derpibooru Forum Filters
 
 ### Description:
-This userscript spoilers forum topics which contain certain filter words or phrases, the default ones being "NSFW" and it's variations to make the board more worksafe.
+This userscript spoilers forum topics which contain certain filter words or phrases, the default ones being "NSFW" and its variations to make the board more worksafe.
 
 ### Variants:
 
@@ -18,7 +18,7 @@ This userscript spoilers forum topics which contain certain filter words or phra
 
 ### Known issues:
 
-- Since Derpi4U sets CSS styles on initialization and the styles are determined by which version of the library is called first the main version of this script requires being launched before any other scripts that use the original library for their settings or the styles will break.
+- Since Derpi4U sets CSS styles on initialization and the styles are determined by which version of the library is called first the main version of this script requires being set before any other scripts that use the original library for their settings in the script manager or the styles will break.
 
 ### Change Log:
 ```
