@@ -5,7 +5,8 @@
 // @include     /^https?://(www\.)?(derpi|trixie)booru\.org/.*$/
 // @include     https://ronxgr5zb4dkwdpt.onion/*
 // @grant       none
-// @version     1.0.0
+// @version     1.0.1
+// @license     CC BY-NC-SA 4.0
 // @description New image links with less tags.
 // ==/UserScript==
 
@@ -20,8 +21,7 @@ if (window.location.pathname.match(/(\/images)?\/\d+/i) !== null) {
   const tagList = document.querySelectorAll('span[class="tag dropdown"]');
 
   for (x of tagList) {
-    const escapeChars = {'-':'-dash-', '/':'-fwslash-', '\\':'-bwslash-', ':':'-colon-', '.':'-dot-', '+':'-plus-', ' ':'+'};
-    const tagId = x.dataset.tagName.replace(/-|\/|\\|\:|\.|\+| /g, function(match) {return escapeChars[match];});
+    const tagId = x.dataset.tagSlug;
     if (x.dataset.tagCategory === 'origin') {
       tagOrigin += '_' + tagId;
     } else if (x.dataset.tagCategory === 'rating') {
