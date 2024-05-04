@@ -23,7 +23,7 @@ Open the script code and click "raw", your script manager should recognize it.
 
   - **derpibooru-upload-tag-legacy** — Fills in a "safe" tag on the new image upload page on Derpibooru. An older version of the script above that doesn't rely on Mark Taiwan's library or needs Violentmonkey to use on Firefox at the exchange of customizability (you can still edit the values in the code itself though).
 
-`A known issue for the non-legacy versions of the two scripts above - due to now using a modified version of the library and said library using the CSS styles imposed by the version loaded first they need to be ordered to initialize first (idk if Tampermonkey supports load order customization but Violentmonkey does, you should use the latter anyway).`
+`A known issue for the non-legacy versions of the two scripts above - due to now using a modified version of the library and said library using the CSS styles imposed by the version loaded first they need to be ordered to initialize first (I don't know whether Tampermonkey supports load order customization or not but Violentmonkey does, you should use the latter anyway).`
 
 ### Credits:
 
