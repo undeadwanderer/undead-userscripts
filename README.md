@@ -9,9 +9,9 @@ Open the script code and click "raw", your script manager should recognize it.
 
 ### Scripts in this repo:
 
-- !NEW! **tabun-filters** — Post and comment filters for the MLP fansite tabun.everypony.ru. Fork of an abandoned userscript by CAHCET. See the script's folder for more information.
-
 - !NEW! **derpibooru-compact-image-names** — Edits image "View" and "Download" links to use only the rating, artist (origin) and character tags in image filenames.
+
+- **tabun-filters** — Post and comment filters for the MLP fansite tabun.everypony.ru. Fork of an abandoned userscript by CAHCET. See the script's folder for more information.
 
 - **eqd-page-title-cleanup** — Retitles Equestria Daily's pages for convenience.
 
