@@ -1,5 +1,5 @@
 # Undead Userscripts
-Some JS code I either made back in early 2018 [Basically baby's first scripts] or forked recently. These weren't the only scripts I made at the time but these are confirmed to work presently and which I intend to continue supporting.
+Some attemts at JS code I either made back in early 2018 (Basically baby's first scripts) or resumed making recently.
 
 ### License:
 Everything except for **tabun-filters** is under **Creative Commons BY-NC-SA 4.0**, **tabun-filters** is under **WTFPL** as of how the original coder left it.
@@ -9,7 +9,7 @@ Open the script code and click "raw", your script manager should recognize it.
 
 ### Scripts in this repo:
 
-- !NEW! **derpibooru-compact-image-names** — Edits image "View" and "Download" links to use only the rating, artist (origin) and character tags in image filenames.
+- !NEW! **derpibooru-compact-image-names** — Edits image "View" and "Download" links on Derpibooru to use only the rating, artist (origin) and character tags in image filenames.
 
 - **tabun-filters** — Post and comment filters for the MLP fansite tabun.everypony.ru. Fork of an abandoned userscript by CAHCET. See the script's folder for more information.
 
