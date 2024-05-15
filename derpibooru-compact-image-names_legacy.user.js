@@ -5,11 +5,9 @@
 // @include     /^https?://(www\.)?(derpi|trixie)booru\.org/.*$/
 // @include     https://ronxgr5zb4dkwdpt.onion/*
 // @grant       none
-// @version     1.1.0
+// @version     1.1.1
 // @description New image links with less tags.
 // ==/UserScript==
-
-"use strict";
 
 if (window.location.pathname.match(/(\/images)?\/\d+/i) !== null) {
     const hostName = window.location.origin;
