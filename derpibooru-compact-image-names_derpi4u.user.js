@@ -6,16 +6,14 @@
 // @include     https://ronxgr5zb4dkwdpt.onion/*
 // @require     https://raw.githubusercontent.com/undeadwanderer/Derpibooru-Unified-Userscript-Ui/master/derpi-four-u.js
 // @grant       none
-// @version     1.1.0
+// @version     1.1.1
 // @description New image links with less tags.
 // ==/UserScript==
-
-"use strict";
 
 const config = ConfigManager(
     'Derpibooru Customizable Image Names',
     'derpi_compact_image_url',
-    'Customize full file names for viewed and downloaded images'
+    'Customize full file names for viewed and downloaded images.'
 );
 let tagConfig = config.addFieldset(
     'Tags to be used in the image names:',
