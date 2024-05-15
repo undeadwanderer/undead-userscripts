@@ -22,7 +22,7 @@ Open the script code and click "raw", your script manager should recognize it.
 
   - **derpibooru-upload-tag-legacy** — Fills in a "safe" tag on the new image upload page on Derpibooru. An older version of the script above that doesn't rely on Mark Taiwan's library or needs Violentmonkey to use on Firefox at the exchange of customizability (you can still edit the values in the code itself though).
 
-- **derpibooru-compact-image-names** — Edits image "View" and "Download" links on Derpibooru to use only certain tag types from the image (artist/origin and characters by default).
+- **derpibooru-compact-image-names** — Edits image "View" and "Download" links on Derpibooru to use only certain tag types from the image (ratings, artist/origin and characters by default).
   
   - **\_derpi4u** — Uses Derpi4U for configuration.
   - **\_legacy** - Legacy version where enabled tag types are to be edited in the code.
