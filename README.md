@@ -18,7 +18,7 @@ Open the script code and click "raw", your script manager should recognize it.
   - **derpibooru-forum-filter-1.0-derpi4u-legacy** — A version of the script above that uses the unmodified gui library.
   - **derpibooru-forum-filter-1.0-legacy** — A version of the scripts above that doesn't require any libraries, the filter words array is editable in the code.
 
-- **derpibooru-upload-tag** — Automatically fills in tags of your choice on the image upload page on Derpibooru, as of now uses Mark Taiwan's library so the note on the script above applies.
+- **derpibooru-upload-tag** — Automatically fills in tags and description of your choice on the image upload page on Derpibooru, as of now uses Mark Taiwan's library so the note on the script above applies.
 
   - **derpibooru-upload-tag-legacy** — Fills in a "safe" tag on the new image upload page on Derpibooru. An older version of the script above that doesn't rely on Mark Taiwan's library or needs Violentmonkey to use on Firefox at the exchange of customizability (you can still edit the values in the code itself though).
 
