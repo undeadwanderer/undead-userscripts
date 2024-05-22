@@ -1,16 +1,22 @@
 // ==UserScript==
-// @name        Derpi compact image names test
+// @name        Derpi compact image names
 // @author      undead_wanderer
 // @namespace   https://derpibooru.org/profiles/Pink%2BAmena
+// @description New image links with less tags.
+// @version     1.1.2 / 2024-05-22
+// @license     Creative Commons BY-NC-SA 4.0
 // @include     /^https?://(www\.)?(derpi|trixie)booru\.org/.*$/
 // @include     https://ronxgr5zb4dkwdpt.onion/*
 // @require     https://raw.githubusercontent.com/undeadwanderer/Derpibooru-Unified-Userscript-Ui/master/derpi-four-u.js
+// @inject-into content
 // @grant       none
-// @version     1.1.1
-// @description New image links with less tags.
 // ==/UserScript==
 
-const config = ConfigManager(
+"use strict";
+
+// Derpi4U stuff
+
+let config = ConfigManager(
     'Derpibooru Customizable Image Names',
     'derpi_compact_image_url',
     'Customize full file names for viewed and downloaded images.'
@@ -83,6 +89,8 @@ tagConfig.registerSetting({
     defaultValue: false
 });
 
+// Main code
+
 const tagRatingsEnabled = config.getEntry('tags_rating');               // Enables rating tags
 const tagOriginEnabled = config.getEntry('tags_origin');                // Enables artist/origin tags
 const tagCharactersEnabled = config.getEntry('tags_characters');        // Enables character and oc tags
@@ -109,7 +117,7 @@ if (window.location.pathname.match(/(\/images)?\/\d+/i) !== null) {
     const uploadDate = document.querySelector('time[datetime]').getAttribute('datetime').match(/\d\d\d\d-\d\d-\d\d/)[0].split(/-0?/);
     const tagList = document.querySelectorAll('span[class="tag dropdown"]');
 
-    for (x of tagList) {
+    for (let x of tagList) {
     const tagId = x.dataset.tagSlug;
         if (tagOriginEnabled === true && x.dataset.tagCategory === 'origin') {
           tagOrigin += '_' + tagId;
