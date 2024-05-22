@@ -33,9 +33,10 @@ Open the script code and click "raw", your script manager should recognize it.
 - Versions of Derpibooru scripts stated to use Mark Taiwan's Derpibooru Unified Userscript UI Utility (Derpi4U) are configured by navigating to Derpibooru's user settings (/settings/edit) then to the "Userscript" tab.
 - Non-Derpi4U legacy versions are configured by editing the variable in the code, I didn't add update urls at the moment so they won't be overwritten automatically by a sudden script update (you'll still have to back the variables up though).
 
-![](https://github.com/undeadwanderer/undead-userscripts/assets/51511863/42def76d-6dc5-471f-841c-46ede6d54b37)
+![image](https://github.com/undeadwanderer/undead-userscripts/assets/51511863/5d2b0d27-4772-4eb5-a778-11398236384a)
+
 
 ### Credits:
 
-- [Mark Taiwan a.k.a Marker](https://github.com/marktaiwan) for **Derpibooru Unified Userscript UI Utility** library.
-- [Rene_Z](https://github.com/ReneZeidler) and [stsyn](https://github.com/stsyn) for **Tag Suggestions** userscript; I referenced the code while making the current version of **upload-tag**.
+- [Mark Taiwan a.k.a Marker](https://github.com/marktaiwan) for the **Derpibooru Unified Userscript UI Utility** library.
+- [Rene_Z](https://github.com/ReneZeidler) and [stsyn](https://github.com/stsyn) for **Tag Suggestions** userscript; I referenced the code while making the current version of **derpibooru-upload-tag**.
