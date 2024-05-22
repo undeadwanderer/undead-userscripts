@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Derpibooru Thread Filter legacy
 // @author       Undead_Wanderer
-// @description  An attempt to make the forums a little more worksafe by spoilering thread titles containing "NSFW". Made for personal use. May get false positives ("No NSFW"-type titles, etc.).
+// @description  An attempt to make the forums a little more worksafe by spoilering thread titles containing "NSFW". Made for personal use.
 // @version      1.1 / 2024-05-22
 // @namespace    https://derpibooru.org/profiles/Pink%2BAmena
 // @license      Creative Commons BY-NC-SA 4.0
