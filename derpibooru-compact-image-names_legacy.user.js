@@ -2,12 +2,15 @@
 // @name        Derpi compact image names legacy
 // @author      undead_wanderer
 // @namespace   https://derpibooru.org/profiles/Pink%2BAmena
+// @description New image links with less tags.
+// @version     1.1.2 | 2024-05-22
+// @license     Creative Commons BY-NC-SA 4.0
 // @include     /^https?://(www\.)?(derpi|trixie)booru\.org/.*$/
 // @include     https://ronxgr5zb4dkwdpt.onion/*
 // @grant       none
-// @version     1.1.1
-// @description New image links with less tags.
 // ==/UserScript==
+
+"use strict";
 
 if (window.location.pathname.match(/(\/images)?\/\d+/i) !== null) {
     const hostName = window.location.origin;
@@ -34,7 +37,7 @@ if (window.location.pathname.match(/(\/images)?\/\d+/i) !== null) {
     const uploadDate = document.querySelector('time[datetime]').getAttribute('datetime').match(/\d\d\d\d-\d\d-\d\d/)[0].split(/-0?/);
     const tagList = document.querySelectorAll('span[class="tag dropdown"]');
 
-    for (x of tagList) {
+    for (let x of tagList) {
     const tagId = x.dataset.tagSlug;
         if (tagOriginEnabled === true && x.dataset.tagCategory === 'origin') {
           tagOrigin += '_' + tagId;
