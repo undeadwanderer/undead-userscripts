@@ -32,7 +32,7 @@ Open the script code and click "raw", your script manager should recognize it. I
 `A known issue for the non-legacy versions of the three scripts above - due to now using a modified version of the library and said library using the CSS styles imposed by the version loaded first they need to be ordered to initialize first (I don't know whether Tampermonkey supports load order customization or not but Violentmonkey does, you should use the latter anyway).`
 
 ### Configuration:
-- Versions of Derpibooru scripts stated to use Mark Taiwan's Derpibooru Unified Userscript UI Utility (Derpi4U) are configured by navigating to Derpibooru's user settings (/settings/edit) then to the "Userscript" tab.
+- Versions of Derpibooru scripts stated to use Mark Taiwan's Derpibooru Unified Userscript UI Utility (Derpi4U) are configured by navigating to Derpibooru's user settings (/settings/edit) then to the "Userscript" tab. Refer to the [library's documentation](https://github.com/undeadwanderer/Derpibooru-Unified-Userscript-Ui/blob/master/README.md) for more information.
 - Non-Derpi4U legacy versions are configured by editing the variable in the code, I didn't add update urls at the moment so they won't be overwritten automatically by a sudden script update (you'll still have to back the variables up though).
 
 ![image](https://github.com/undeadwanderer/undead-userscripts/assets/51511863/5d2b0d27-4772-4eb5-a778-11398236384a)
