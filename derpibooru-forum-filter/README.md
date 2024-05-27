@@ -11,6 +11,7 @@ This userscript spoilers forum topics which contain certain filter words or phra
 
 ### Requirements:
 - Violentmonkey if you're on Firefox and use any Derpi4U variant of the script.
+- The script might not work on outdated browser versions since I've got no way to check.
 
 ### Installation:
 
