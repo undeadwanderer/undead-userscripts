@@ -3,7 +3,7 @@
 // @author      undead_wanderer
 // @namespace   https://derpibooru.org/profiles/Pink%2BAmena
 // @description New image links with less tags.
-// @version     1.1.2 / 2024-05-22
+// @version     1.1.3 / 2024-05-27
 // @license     Creative Commons BY-NC-SA 4.0
 // @include     /^https?://(www\.)?(derpi|trixie)booru\.org/.*$/
 // @include     https://ronxgr5zb4dkwdpt.onion/*
@@ -91,56 +91,61 @@ tagConfig.registerSetting({
 
 // Main code
 
-const tagRatingsEnabled = config.getEntry('tags_rating');               // Enables rating tags
-const tagOriginEnabled = config.getEntry('tags_origin');                // Enables artist/origin tags
-const tagCharactersEnabled = config.getEntry('tags_characters');        // Enables character and oc tags
-const tagSpeciesEnabled = config.getEntry('tags_species');              // Enables species and body type (semi-anthro, anthro) tags
-const tagSpoilersEnabled = config.getEntry('tags_spoilers');            // Enables spoiler tags
-const tagMediaOfficialEnabled = config.getEntry('tags_media_official'); // Enables official content tags
-const tagMediaFanmadeEnabled = config.getEntry('tags_media_fanmade');   // Enables fanwork tags
-const tagErrorEnabled = config.getEntry('tags_error');                  // Enables error tags
-const tagRestEnabled = config.getEntry('tags_rest');                    // Enables the remaining tags
+const tagTypesEnabled = {
+    Ratings: config.getEntry('tags_rating'),               // Enables rating tags
+    Origin: config.getEntry('tags_origin'),                // Enables artist/origin tags
+    Characters: config.getEntry('tags_characters'),        // Enables character and oc tags
+    Species: config.getEntry('tags_species'),              // Enables species and body type (semi-anthro, anthro) tags
+    Spoilers: config.getEntry('tags_spoilers'),            // Enables spoiler tags
+    MediaOfficial: config.getEntry('tags_media_official'), // Enables official content tags
+    MediaFanmade: config.getEntry('tags_media_fanmade'),   // Enables fanwork tags
+    Error: config.getEntry('tags_error'),                  // Enables error tags
+    Rest: config.getEntry('tags_rest')                     // Enables the remaining tags
+};
+
 
 if (window.location.pathname.match(/(\/images)?\/\d+/i) !== null) {
     const hostName = window.location.origin;
     const imageId = window.location.pathname.replace(/(\/images)?\//i, '');
     const imageFormat = document.querySelector('.image-size').innerHTML.match(/gif|jpg|jpeg|png|svg|webm/i)[0].toLowerCase();
-    let tagRatings = '';
-    let tagOrigin = '';
-    let tagCharacters = '';
-    let tagSpecies = '';
-    let tagMediaOfficial = '';
-    let tagMediaFanmade = '';
-    let tagSpoilers = '';
-    let tagError = '';
-    let tagRest = '';
+    let tags = {
+        Ratings: '',
+        Origin: '',
+        Characters: '',
+        Species: '',
+        MediaOfficial: '',
+        MediaFanmade: '',
+        Spoilers: '',
+        Error: '',
+        Rest: ''
+    };
     const uploadDate = document.querySelector('time[datetime]').getAttribute('datetime').match(/\d\d\d\d-\d\d-\d\d/)[0].split(/-0?/);
     const tagList = document.querySelectorAll('span[class="tag dropdown"]');
 
     for (let x of tagList) {
     const tagId = x.dataset.tagSlug;
-        if (tagOriginEnabled === true && x.dataset.tagCategory === 'origin') {
-          tagOrigin += '_' + tagId;
-        } else if (tagRatingsEnabled === true && x.dataset.tagCategory === 'rating') {
-          tagRatings += '_' + tagId;
-        } else if (tagCharactersEnabled === true && (x.dataset.tagCategory === 'character' || x.dataset.tagCategory === 'oc')) {
-          tagCharacters += '_' + tagId;
-        } else if (tagSpeciesEnabled === true && (x.dataset.tagCategory === 'species' || x.dataset.tagCategory === 'body-type')) {
-          tagSpecies += '_' + tagId;
-        } else if (tagSpoilersEnabled === true && x.dataset.tagCategory === 'spoiler') {
-          tagSpoilers += '_' + tagId;
-        } else if (tagMediaOfficialEnabled === true && x.dataset.tagCategory === 'content-official') {
-          tagMediaOfficial += '_' + tagId;
-        } else if (tagMediaFanmadeEnabled === true && x.dataset.tagCategory === 'content-fanmade') {
-          tagMediaFanmade += '_' + tagId;
-        } else if (tagErrorEnabled === true && x.dataset.tagCategory === 'error') {
-          tagError += '_' + tagId;
-        } else if (tagRestEnabled === true && x.dataset.tagCategory === '') {
-          tagRest += '_' + tagId;
+        if (tagTypesEnabled.Origin === true && x.dataset.tagCategory === 'origin') {
+          tags.Origin += '_' + tagId;
+        } else if (tagTypesEnabled.Ratings === true && x.dataset.tagCategory === 'rating') {
+          tags.Ratings += '_' + tagId;
+        } else if (tagTypesEnabled.Characters === true && (x.dataset.tagCategory === 'character' || x.dataset.tagCategory === 'oc')) {
+          tags.Characters += '_' + tagId;
+        } else if (tagTypesEnabled.Species === true && (x.dataset.tagCategory === 'species' || x.dataset.tagCategory === 'body-type')) {
+          tags.Species += '_' + tagId;
+        } else if (tagTypesEnabled.Spoilers === true && x.dataset.tagCategory === 'spoiler') {
+          tags.Spoilers += '_' + tagId;
+        } else if (tagTypesEnabled.MediaOfficial === true && x.dataset.tagCategory === 'content-official') {
+          tags.MediaOfficial += '_' + tagId;
+        } else if (tagTypesEnabled.MediaFanmade === true && x.dataset.tagCategory === 'content-fanmade') {
+          tags.MediaFanmade += '_' + tagId;
+        } else if (tagTypesEnabled.Error === true && x.dataset.tagCategory === 'error') {
+          tags.Error += '_' + tagId;
+        } else if (tagTypesEnabled.Rest === true && x.dataset.tagCategory === '') {
+          tags.Rest += '_' + tagId;
         }
     }
 
-    let imageName = imageId + '_' + tagError + tagRatings + tagOrigin + tagCharacters + tagSpecies + tagMediaOfficial + tagMediaFanmade + tagSpoilers + tagRest;
+    let imageName = imageId + '_' + tags.Error + tags.Ratings + tags.Origin + tags.Characters + tags.Species + tags.MediaOfficial + tags.MediaFanmade + tags.Spoilers + tags.Rest;
     imageName = imageName.slice(0, 150) + '.' + imageFormat;
     let viewLink = document.querySelector('a[title="View (tags in filename)"]');
     let downloadLink = document.querySelector('a[title="Download (tags in filename)"]');
