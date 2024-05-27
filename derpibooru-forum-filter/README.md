@@ -58,7 +58,7 @@ This userscript spoilers forum topics which contain certain filter words or phra
 ```
 
 ### Considered future features:
-- Word escapes so you can make filter exceptions ("No NSFW" topics etc.).
+- ~~Word escapes so you can make filter exceptions ("No NSFW" topics etc.).~~ Implemented as of version 1.1
 - Expand compatibility to other Philomena boards (I don't use any of them so I can't guarantee anything).
 - ~~Profile pages support~~ - done as of 1.0.
 - ~~Support for multiple filter words~~ - implemented as of 0.95 but may need improvement.
