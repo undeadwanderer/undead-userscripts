@@ -1,5 +1,5 @@
 # Undead Userscripts
-Some attempts at JS code I either made back in early 2018 (Basically baby's first scripts) or resumed making recently.
+Some attempts at JS code for MLP fansites I either made back in early 2018 (Basically baby's first scripts) or resumed making recently.
 
 ### License:
 Everything except for **tabun-filters** is under **Creative Commons BY-NC-SA 4.0**, **tabun-filters** is under **WTFPL** as of how the original coder left it.
