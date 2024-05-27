@@ -15,7 +15,7 @@ Open the script code and click "raw", your script manager should recognize it. I
 
 - **eqd-page-title-cleanup** — Retitles Equestria Daily's pages for convenience.
 
-- **derpibooru-forum-filter** — Spoilers forum topics with "NSFW" (or any other words you don't wish to see) in the title on Derpibooru. Refer to the script's folder for more information. [Upd. 2024-02-18: Due to as of now using Mark Taiwan's gui library for the settings, __requires Violentmonkey__ if you're on Firefox. Said settings can be found in the "Userscripts" tab on the Settings page.]
+- **derpibooru-forum-filter** — Spoilers forum topics with "NSFW" (or any other words you don't wish to see) in the title on Derpibooru. Refer to the script's folder for more information. [Upd. 2024-02-18: Due to as of now using Mark Taiwan's gui library for the settings, `requires Violentmonkey` if you're on Firefox. Said settings can be found in the "Userscripts" tab on the Settings page.]
 
   - **derpibooru-forum-filter-derpi4u-legacy** — A version of the script above that uses the original gui library instead of my fork.
   - **derpibooru-forum-filter-legacy** — A version of the scripts above that doesn't require any libraries, the filter words array is editable in the code.
