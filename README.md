@@ -9,6 +9,8 @@ Open the script code and click "raw", your script manager should recognize it. I
 
 ### Scripts in this repo:
 
+- NEW: **derpibooru-search-reverse** — An experimental script for Derpibooru that adds a button that reverses the order of the current image list while saving the current page's relative position in the list. Works with the main image list, activity page, search results and galleries. Dusted off one of my beginner scripts and made a bunch of fixes and improvements to get it working with the current version of the site.
+
 - **tabun-filters** — Post and comment filters for the MLP fansite tabun.everypony.ru. Fork of an abandoned userscript by CAHCET. See the script's folder for more information.
 
 - **eqd-page-title-cleanup** — Retitles Equestria Daily's pages for convenience.
