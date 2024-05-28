@@ -3,9 +3,10 @@
 // @author       undead_wanderer
 // @homepageURL  https://github.com/undeadwanderer/undead-userscripts
 // @description  Adds a button to show the current image list in an opposite order.
-// @version      1.0.0
+// @version      1.0.1
+// @license      Creative Commons BY-NC-SA 4.0
 // @namespace    https://derpibooru.org/profiles/Pink%2BAmena
-// @include      /https?://(www\.)?((derpi|trixie)booru\.org|ronxgr5zb4dkwdpt\.onion)/((?!.)|search?.*q=(?!&|\&)|activity|images(?!(/new|/\d))|galleries\/\d)/
+// @include      /https?://(www\.)?((derpi|trixie)booru\.org|ronxgr5zb4dkwdpt\.onion)/((?!.)|search?.*q=(?!&|\&)|activity|images(?!(/new|/\d))|galleries\/\d)|tags(?=\/.+)/
 // @grant        none
 // ==/UserScript==
 
@@ -23,7 +24,7 @@ if (document.querySelector("div#imagelist-container") !== null) {  // failsafe t
             }
         });
         if (z === "") {
-            var z = url;      // get the link to the last page
+            z = url;      // get the link to the last page
         }
     }
     function1();
@@ -51,11 +52,8 @@ function function1() { // main part of the script that makes a new url
     if (url.includes("/search")) {                // when the current location is a search page
         if (x[0] !== undefined) {                         // failsafe to prevent execution on pages without pagination
             if (url.includes("page=")) {          // check if there's information about the current page. if there isn't, consider it to be the first page
-                // let a = Number(url.substring(url.indexOf("page=") + 5, url.indexOf("&q="))); // get the current page number
-                let a = Number(url.match(/page=\d+/i)[0].replace('page=',''));
+                let a = Number(url.match(/page=\d+/i)[0].replace('page=','')); // get the current page number
                 if (a !== 1) {                     // if this is not the first page of the search, replace its index
-                    // let b = Number(z.substring(z.indexOf("page=") + 5, z.indexOf("&q=")));
-                    //            a = b - a + 1;                 // get the last page number; get the page number for the reverse order
                     url = url.replace("page=" + a, "page=" + String(z - a + 1)); // set the current page number for the reverse order
                 } else {
                     url = url.replace("?page=1", "?page=" + z + "&");
@@ -81,10 +79,20 @@ function function1() { // main part of the script that makes a new url
                 url = "https://" + window.location.hostname + "/search?page=" + z + "&sd=asc&sf=gallery_id:" + galleryId + "&q=gallery_id:" + galleryId; // make a search for everything ordered by ascending and with page number swapped for a corresponding one for the reverse irder
             } else {
                 let a = Number(url.match(/page=\d+/i)[0].replace('page=',''));
-                // z = z.replace(/\?(^!page).*$/ig, "");                            // trim search parameters from the last page link
-                // a = Number(z.replace('page=','')) - a + 1;                      // get the last page numberl; get the page number for the reverse order
-                a = z - a + 1;                      // get the last page numberl; get the page number for the reverse order
+                a = z - a + 1;                                                       // get the last page numberl; get the page number for the reverse order
                 url = "https://" + window.location.hostname + "/search?page=" + a + "&sd=asc&sf=gallery_id:" + galleryId + "&q=gallery_id:" + galleryId; // make a search for everything ordered by ascending and with page number swapped for a corresponding one for the reverse irder
+            }
+        }
+    } else if (url.includes("/tags/")) {
+        let tagId = url.match(/tags\/[^?&]+/i)[0].replace("tags/","");
+        let tagSlug = document.querySelector("span[class='tag dropdown']").dataset.tagSlug;
+        if (tagId !== null) { // failsafe
+            if (url.match(/page=\d+?/) === null || Number(url.match(/page=\d+?/)[0].replace('page=','')) === 1) { // first page of the gallery check
+                url = "https://" + window.location.hostname + "/search?q=" + tagSlug + "&page=" + z + "&sf=first_seen_at&sd=asc"; // make a search for everything ordered by ascending and with page number swapped for a corresponding one for the reverse irder
+            } else {
+                let a = Number(url.match(/page=\d+/i)[0].replace('page=',''));
+                a = z - a + 1;                      // get the last page numberl; get the page number for the reverse order
+                url = "https://" + window.location.hostname + "/search?page=" + a + "&q=" + tagSlug + "&sf=first_seen_at&sd=asc"; // make a search for everything ordered by ascending and with page number swapped for a corresponding one for the reverse irder
             }
         }
     } else if (url.includes("images") || window.location.pathname === "/" || window.location.pathname === "/activity") { // when the current location is a page in the image list or the main page or the acrivity page
