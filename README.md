@@ -9,7 +9,7 @@ Open the script code and click "raw", your script manager should recognize it. I
 
 ### Scripts in this repo:
 
-- NEW: **derpibooru-search-reverse** — An experimental script for Derpibooru that adds a button that reverses the sort order of the current image list while saving the current page's relative position in the list. Works with the main image list, tags, activity page, search results and galleries. Basically dusted off one of my beginner scripts and made a bunch of fixes and improvements to get it working with the current version of the site.
+- NEW: **derpibooru-search-reverse** — An experimental script for Derpibooru that adds a button that reverses the sort order of the current image list while saving the current page's relative position in the list. Works with the main image list, tags, activity page, search results and galleries. Basically dusted off one of my beginner studies and made a bunch of fixes and improvements to get it working with the current version of the site.
 
 - **tabun-filters** — Post and comment filters for the MLP fansite tabun.everypony.ru. Fork of an abandoned userscript by CAHCET. See the script's folder for more information.
 
@@ -35,6 +35,7 @@ Open the script code and click "raw", your script manager should recognize it. I
 - Versions of Derpibooru scripts stated to use Mark Taiwan's Derpibooru Unified Userscript UI Utility (Derpi4U) are configured by navigating to Derpibooru's user settings (/settings/edit) then to the "Userscript" tab. Refer to the [library's documentation](https://github.com/undeadwanderer/Derpibooru-Unified-Userscript-Ui/blob/master/README.md) for more information.
 - Non-Derpi4U legacy versions are configured by editing the variables in the code, I didn't add update urls at the moment so they won't be overwritten automatically by a sudden script update (you'll still have to back the variables up though).
 
+Example config tab:
 ![Example screenshot of the userscripts settings tab](https://github.com/undeadwanderer/undead-userscripts/assets/51511863/5d2b0d27-4772-4eb5-a778-11398236384a)
 
 
