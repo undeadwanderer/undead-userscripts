@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Derpibooru upload page customization
+// @name         Derpibooru upload page customization legacy
 // @author       undead_wanderer
 // @description  Automatically adds tags and description of your choosing on the image upload page. Made for personal use.
 // @version      0.8.2 | 2024-06-12
