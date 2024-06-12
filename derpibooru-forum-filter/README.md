@@ -6,8 +6,8 @@ This userscript spoilers forum topics which contain certain filter words or phra
 ### Variants:
 
 - **derpibooru-forum-filter.user.js** — Main version, uses a modified version of Mark Taiwan's "Derpi4U" library to edit and store settings, the filter words are separated with new line.
-- **derpibooru-forum-filter-1.0-derpi4u-legacy.user.js** - A legacy version which uses the original Derpi4U script, the filter words are separated with commas.
-- **derpibooru-forum-filter-1.0-legacy.user.js** - A legacy version which doesn't use any libraries and is set up by editing the `markerWords` variable in the code itself, the filter words are separated with commas.
+- **derpibooru-forum-filter-derpi4u-legacy.user.js** - A legacy version which uses the original Derpi4U script, the filter words are separated with commas.
+- **derpibooru-forum-filter-legacy.user.js** - A legacy version which doesn't use any libraries and is set up by editing the `markerWords` variable in the code itself, the filter words are separated with commas.
 
 ### Requirements:
 - Violentmonkey if you're on Firefox and use any Derpi4U variant of the script.
