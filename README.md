@@ -5,7 +5,7 @@ Some attempts at JS code for MLP fansites I either made back in early 2018 (Basi
 Everything except for **tabun-filters** is under **Creative Commons BY-NC-SA 4.0**, **tabun-filters** is under **WTFPL** as of how the original coder left it.
 
 ### Installation/updating:
-Open the script code and click "raw", your script manager should recognize it. I have yet to add autoupdate links into the code so you'll have to update the scripts manually for now.
+Open the script code and click "raw", your script manager should recognize it. I have yet to add autoupdate links into the code so you'll have to update the scripts manually for now. [upd.: Looks like ViolentMonkey might fill in an update url when installing a script from the webpage so you might want to turn autoupdate of such a script off in case you need to edit the vars.]
 
 ### Scripts in this repo:
 
@@ -33,7 +33,7 @@ Open the script code and click "raw", your script manager should recognize it. I
 
 ### Configuration:
 - Versions of Derpibooru scripts stated to use Mark Taiwan's Derpibooru Unified Userscript UI Utility (Derpi4U) are configured by navigating to Derpibooru's user settings (/settings/edit) then to the "Userscript" tab, and saved by pressing the "save my settings" button. Refer to the [library's documentation](https://github.com/undeadwanderer/Derpibooru-Unified-Userscript-Ui/blob/master/README.md) for more information.
-- Non-Derpi4U legacy versions are configured by editing the variables in the code, I didn't add update urls at the moment so they shouldn't be overwritten automatically by a sudden script update (you'll still have to back the variables up though). [upd.: Looks like ViolentMonkey might fill in an update url when installing a script from the webpage so you might want to turn autoupdate of such a script off in case you need to edit the vars.]
+- Non-Derpi4U legacy versions are configured by editing the variables in the code, don't forget to back up your changes before updating the scripts.
 
 Example config tab:
 ![Example screenshot of the userscripts settings tab](https://github.com/undeadwanderer/undead-userscripts/assets/51511863/5d2b0d27-4772-4eb5-a778-11398236384a)
