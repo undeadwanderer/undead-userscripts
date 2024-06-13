@@ -27,7 +27,7 @@ Open the script code and click "raw", your script manager should recognize it. I
 - **derpibooru-compact-image-names** — Edits image "View" and "Download" links on Derpibooru to use only certain tag types from the image (ratings, artist/origin and characters by default).
   
   - **\_derpi4u** — Uses Derpi4U (my fork) for configuration.
-  - **\_legacy** - Legacy version where enabled tag types are to be edited in the code.
+  - **\_legacy** — Legacy version where enabled tag types are to be edited in the code.
 
 `A known issue for the non-legacy versions of the three scripts above - due to now using a modified version of the library and said library using the CSS styles imposed by the version loaded first they need to be ordered to initialize first (I don't know whether Tampermonkey supports load order customization or not but Violentmonkey does, you should use the latter anyway).`
 
@@ -42,4 +42,4 @@ Example config tab:
 ### Credits:
 
 - [Mark Taiwan a.k.a Marker](https://github.com/marktaiwan) for the **Derpibooru Unified Userscript UI Utility** library.
-- [Rene_Z](https://github.com/ReneZeidler) and [stsyn](https://github.com/stsyn) for **Tag Suggestions** userscript; I referenced the code while making the current version of **derpibooru-upload-tag**.
+- [Rene_Z](https://github.com/ReneZeidler) and [stsyn](https://github.com/stsyn) for the **Tag Suggestions** userscript; I referenced the code while making the current version of **derpibooru-upload-tag**.
