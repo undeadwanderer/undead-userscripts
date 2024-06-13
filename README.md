@@ -5,7 +5,7 @@ Some attempts at JS code for MLP fansites I either made back in early 2018 (Basi
 Everything except for **tabun-filters** is under **Creative Commons BY-NC-SA 4.0**, **tabun-filters** is under **WTFPL** as of how the original coder left it.
 
 ### Installation/updating:
-Open the script code and click "raw", your script manager should recognize it. I have yet to add autoupdate links into the code so you'll have to update the scripts manually for now. [upd.: Looks like ViolentMonkey might fill in an update url when installing a script from the webpage so you might want to turn autoupdate of such a script off in case you need to edit the vars.]
+Open the script code and click "raw", your script manager should recognize it. I have yet to add autoupdate links into the code so you'll have to update the scripts manually for now. [upd.: Looks like Violentmonkey might fill in an update url when installing a script from the webpage so you might want to turn autoupdate of such a script off in case you need to edit the vars.]
 
 ### Scripts in this repo:
 
