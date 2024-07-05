@@ -1,4 +1,4 @@
-# Derpibooru Forum Filters
+# Forum Filters for Philomena-based imageboorus
 
 ### Description:
 This userscript spoilers forum topics which contain certain filter words or phrases, the default ones being "NSFW" and its variations to make the board more worksafe.
@@ -23,6 +23,7 @@ This userscript spoilers forum topics which contain certain filter words or phra
 
 ### Change Log:
 ```
+1.2   / 2024-07-05: The script now runs on other Philomena-powered boorus; also did some code clean-up and added more comments.
 1.1   / 2024-05-22: Added a setting for words or phrases to exclude from filtering
                     ("Escape words" setting in Derpi4U or escapeWords variable in the legacy script).
 1.00  / 2024-04-26: A complete code rewrite - the script is now much more optimized and
@@ -59,7 +60,7 @@ This userscript spoilers forum topics which contain certain filter words or phra
 
 ### Considered future features:
 - ~~Word escapes so you can make filter exceptions ("No NSFW" topics etc.).~~ Implemented as of version 1.1.
-- Expand compatibility to other Philomena boards (I don't use any of them so I can't guarantee anything).
+- ~~Expand compatibility to other Philomena boards (I don't use any of them so I can't guarantee anything).~~ Implemented as of version 1.2.
 - ~~Profile pages support~~ - done as of 1.0.
 - ~~Support for multiple filter words~~ - implemented as of 0.95 but may need improvement.
 - ~~GUI and local storage for filters~~ - implemented as of 0.95b but uses the library's local storage.
