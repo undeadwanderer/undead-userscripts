@@ -1,4 +1,4 @@
-# Forum Filters for Philomena-based imageboorus
+# Forum filters for Philomena-based imageboorus
 
 ### Description:
 This userscript spoilers forum topics which contain certain filter words or phrases, the default ones being "NSFW" and its variations to make the board more worksafe.
