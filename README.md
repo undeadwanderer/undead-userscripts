@@ -29,8 +29,8 @@ Open the script code and click "raw", your script manager should recognize it. I
   - **〃\_derpi4u** — Uses Derpi4U (my fork) for configuration.
   - **〃\_legacy** — Legacy version where enabled tag types are to be edited in the code.
 
-### Important note:
-`A known issue for the non-legacy versions of the three scripts above - due to now using a modified version of the library and said library using the CSS styles imposed by the version loaded first at least one of the scripts needs to be ordered to initialize first (I'm not sure whether Tampermonkey supports load order customization or not but Violentmonkey does, you should use the latter anyway).`
+### Known issues:
+- ~~A known issue for the non-legacy versions of the three scripts above - due to now using a modified version of the library and said library using the CSS styles imposed by the version loaded first at least one of the scripts needs to be ordered to initialize first (I'm not sure whether Tampermonkey supports load order customization or not but Violentmonkey does, you should use the latter anyway).~~ Updated the library fork to solve the conflict; unfortunately, if any of the scripts using the original library are loaded first the full export/import buttons won't display and I don't think I can do anything about that. Either use Violentmonkey and reorder the scripts, or edit them to use my fork. ~~I'd love to push my changes to the library into the original repo but I'm not nearly competent enough yet to do that at the moment.~~
 
 ### Configuration:
 - Versions of Derpibooru scripts stated to use Mark Taiwan's Derpibooru Unified Userscript UI Utility (Derpi4U) are configured by navigating to Derpibooru's user settings (/settings/edit) then to the "Userscript" tab, and saved by pressing the "save my settings" button. Refer to the [library's documentation](https://github.com/undeadwanderer/Derpibooru-Unified-Userscript-Ui/blob/master/README.md) for more information.
