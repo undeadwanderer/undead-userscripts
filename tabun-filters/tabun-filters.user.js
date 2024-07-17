@@ -6,7 +6,7 @@
 // @require        https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js
 // @include        /https?://tabun\.everypony\.(ru|org|info|com|online)/.*/
 // @match          https://tabun.me/*
-// @version        1.17.1
+// @version        1.17.2
 // @grant          GM_getValue
 // @grant          GM_setValue
 // @run-at         document-start
@@ -20,9 +20,8 @@ if (document.location.pathname === '/filters/' ||
 var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 var myObserver = new MutationObserver(mutationHandler);
 var obsConfig = { childList: true, characterData: false, attributes: false, subtree: true };
-const excludedWindowsBlogs = /\/(blog\/(?!newall|discussed)|profile\/.*\/created).*/i; // URL regex for the hiding functions so they won't run on individual blogs or user profiles for filtered blogs
-const excludedWindowsAuthors = /\/(profile\/.*\/created.*|blog\/.*\/\d+\.html)/i; // URL regex for the hiding functions so they won't run on user profiles for filtered profiles
-
+const excludedWindowsBlogs = /\/(blog\/(?!$|newall|discussed)|profile\/.*\/created).*/i; // URL regex for the hiding functions so they won't run on individual blogs or user profiles for filtered blogs
+const excludedWindowsAuthors = /\/(profile\/.*\/created.*|blog\/(.+\/)?\d+\.html)/i; // URL regex for the hiding functions so they won't run on user profiles for filtered profiles
 
 var blockedAuthors = GM_getValue("blockedAuthors", {});
 var blockedBlogs = GM_getValue("blockedBlogs", []);
@@ -91,8 +90,7 @@ Material.prototype.refresh = function (data) {
 		}
 	}
 };
-Material.prototype.checkblock = function () {
-
+Material.prototype.checkblock = function () { 
 	if (
 			(blockedBlogs.indexOf(this.meta.blog) !== -1 && excludedWindowsBlogs.test(window.location.pathname) === false) ||
 			(blockedAuthorsPosts[this.meta.author] === 1 && excludedWindowsAuthors.test(window.location.pathname) === false)
@@ -210,63 +208,66 @@ function updateSteamArticles() {
 }
 
 function filterComments() {
+    
 	$(".comment").each(function () {
 		if (this.className.indexOf('is-filtered') === -1) {
+            let hasAuthor = $(this).find('.comment-author');
+            if (hasAuthor.text() !== null){ // check that the comment wasn't deleted to prevent errors
+                var author = hasAuthor.text().trim();
+                // var id = $(this).data('id');
 
-			var author = $(this).find(".comment-author").text().trim();
-			var id = $(this).data('id');
+                switch (blockedAuthors[author]) {
+                    case 2:
+                        var $wrap = $(this);
+                        var $aShow = $('<a href="#show_comment">[показать]</a>');
+                        // var $aVote = $('<a href="#show_comment">[наказать]</a>');
 
-			switch (blockedAuthors[author]) {
-				case 2:
-					var $wrap = $(this);
-					var $aShow = $('<a href="#show_comment">[показать]</a>');
-					var $aVote = $('<a href="#show_comment">[наказать]</a>');
+                        var $path = $('<div title="' + author + '" class="comment-content"><div class="text"><em>комментарий скрыт </em></div></div>');
+                        $path.children().append($aShow);
+                        // $path.children().append($('<span>&nbsp;</span>'));
+                        // $path.children().append($aVote);
 
-					var $path = $('<div title="' + author + '" class="comment-content"><div class="text"><em>комментарий скрыт </em></div></div>');
-					$path.children().append($aShow);
-					$path.children().append($('<span>&nbsp;</span>'));
-					$path.children().append($aVote);
+                        $aShow.click(function () {
+                            $wrap.children().show();
+                            $path.hide();
+                        });
 
-					$aShow.click(function () {
-						$wrap.children().show();
-						$path.hide();
-					});
+                        // $aVote.click(function () {
+                        // 	ls.vote.vote(id, this, -1, 'comment');
+                        // });
 
-					$aVote.click(function () {
-						ls.vote.vote(id, this, -1, 'comment');
-					});
+                        $wrap.children().hide();
+                        $wrap.append($path);
 
-					$wrap.children().hide();
-					$wrap.append($path);
+                        break;
 
-					break;
+                    case 1:
+                        var $wrap = $(this);
+                        $wrap.find('.text img').each(function () {
 
-				case 1:
-					var $wrap = $(this);
-					$wrap.find('.text img').each(function () {
-
-						var $img = $(this);
-						var $emo = $('<span>O</span>');
-						$emo.css({
-							'cursor': 'pointer'
-						});
-						$emo.click(function () {
-							$img.show();
-							$emo.hide();
-						});
-						$img.after($emo);
-						$img.hide();
-					});
+                            var $img = $(this);
+                            var $emo = $('<span>O</span>');
+                            $emo.css({
+                                'cursor': 'pointer'
+                            });
+                            $emo.click(function () {
+                                $img.show();
+                                $emo.hide();
+                            });
+                            $img.after($emo);
+                            $img.hide();
+                        });
 
 
 
-				default:
-					break;
-			}
+                    default:
+                        break;
+                }
 
-			this.className += ' is-filtered';
-		}
+                this.className += ' is-filtered';
+		    }
 
+        }
 
 
 	});
@@ -431,7 +432,7 @@ function main() {
 		var $radioIgnore1 = $('<label><input type="radio" name="user-filter" value="0" ' + (!!ignoreType ? "" : "checked") + '>&nbsp;Показывать всё</label>');
 		$radioIgnore1.appendTo($liIgnore);
 		$radioIgnore1.click(function () {
-			blockedAuthors = GM_getValue("blockedAuthors", []); // failsafe for setting switching from multiple pages
+			blockedAuthors = GM_getValue("blockedAuthors", {}); // failsafe for setting switching from multiple pages
 			blockedAuthors[userName] = undefined;
 			delete blockedAuthors[userName];
 			GM_setValue("blockedAuthors", blockedAuthors);
@@ -440,7 +441,7 @@ function main() {
 		var $radioIgnore2 = $('<label><input type="radio" name="user-filter" value="1" ' + (ignoreType === 1 ? "checked" : "") + '>&nbsp;Скрывать картинки в комментариях</label>');
 		$radioIgnore2.appendTo($liIgnore);
 		$radioIgnore2.click(function () {
-			blockedAuthors = GM_getValue("blockedAuthors", []);
+			blockedAuthors = GM_getValue("blockedAuthors", {});
 			blockedAuthors[userName] = 1;
 			GM_setValue("blockedAuthors", blockedAuthors);
 		});
@@ -448,16 +449,16 @@ function main() {
 		var $radioIgnore3 = $('<label><input type="radio" name="user-filter" value="2" ' + (ignoreType === 2 ? "checked" : "") + '>&nbsp;Скрывать комментарии</label>');
 		$radioIgnore3.appendTo($liIgnore);
 		$radioIgnore3.click(function () {
-			blockedAuthors = GM_getValue("blockedAuthors", []);
+			blockedAuthors = GM_getValue("blockedAuthors", {});
 			blockedAuthors[userName] = 2;
-			GM_setValue("blockedAuthors", Object.keys(blockedAuthors));
+			GM_setValue("blockedAuthors", blockedAuthors);
 		});
 
 		/* New radio button to block user's posts */
 		var $blockAuthor1 = $('<label><input type="radio" name="user-filter-posts" value="0"' + (!!blockedPosts ? "" : "checked") + '>&nbsp;Показывать посты</label>');
 		$blockAuthor1.appendTo($liBlock);
 		$blockAuthor1.click(function () {
-			blockedAuthorsPosts = GM_getValue("blockedAuthorsPosts", []);
+			blockedAuthorsPosts = GM_getValue("blockedAuthorsPosts", {});
 			blockedAuthorsPosts[userName] = undefined;
 			delete blockedAuthorsPosts[userName];
 			GM_setValue("blockedAuthorsPosts", blockedAuthorsPosts);
@@ -466,7 +467,7 @@ function main() {
 		var $blockAuthor2 = $('<label><input type="radio" name="user-filter-posts" value="1"' + (blockedPosts === 1 ? "checked" : "") + '>&nbsp;Скрывать посты</label>');
 		$blockAuthor2.appendTo($liBlock);
 		$blockAuthor2.click(function () {
-			blockedAuthorsPosts = GM_getValue("blockedAuthorsPosts", []);
+			blockedAuthorsPosts = GM_getValue("blockedAuthorsPosts", {});
 			blockedAuthorsPosts[userName] = 1;
 			GM_setValue("blockedAuthorsPosts", blockedAuthorsPosts);
 		});
