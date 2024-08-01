@@ -1,13 +1,13 @@
 # Forum filters for Philomena-based imageboorus
 
 ### Description:
-This userscript spoilers forum topics which contain certain filter words or phrases, the default ones being "NSFW" and its variations to make the board more worksafe.
+This userscript spoilers forum topics which contain certain filter words or phrases (the default ones being "NSFW" and its variations to make the board more worksafe).
 
 ### Variants:
 
 - **derpibooru-forum-filter.user.js** — Main version, uses a modified version of Mark Taiwan's "Derpi4U" library to edit and store settings, the filter words are separated with new line.
-- **derpibooru-forum-filter-derpi4u-legacy.user.js** - A legacy version which uses the original Derpi4U script, the filter words are separated with commas.
-- **derpibooru-forum-filter-legacy.user.js** - A legacy version which doesn't use any libraries and is set up by editing the `markerWords` variable in the code itself, the filter words are separated with commas.
+- **derpibooru-forum-filter-derpi4u-legacy.user.js** — A legacy version which uses the original Derpi4U script, the filter words are separated with commas.
+- **derpibooru-forum-filter-legacy.user.js** — A legacy version which doesn't use any libraries and is set up by editing the `markerWords` variable in the code itself, the filter words are separated with commas.
 
 ### Requirements:
 - Violentmonkey if you're on Firefox and use any Derpi4U variant of the script.
@@ -19,11 +19,12 @@ This userscript spoilers forum topics which contain certain filter words or phra
 
 ### Known issues:
 
-- `Since Derpi4U sets CSS styles on initialization and the styles are determined by which version of the library is called first the main version of this script requires being set before any other scripts that use the original library for their settings in the script manager or the styles will break.`
+- `The main version of the script uses my fork of Derpi4U that adds export and import buttons, as of yet in order to have the global export/import buttons show up a script using the modified library should be set before other Derpi5U scripts in the manager; my current attepts at a workaround didn't go well but I'll get back to it someday.`
 
 ### Change Log:
 ```
-1.2   / 2024-07-05: The script now runs on other Philomena-powered boorus; also did some code clean-up and added more comments.
+1.2   / 2024-07-05: The script now runs on any Philomena-powered booru (that identifies as such in the html code);
+                    Also did some code clean-up and added more comments.
 1.1   / 2024-05-22: Added a setting for words or phrases to exclude from filtering
                     ("Escape words" setting in Derpi4U or escapeWords variable in the legacy script).
 1.00  / 2024-04-26: A complete code rewrite - the script is now much more optimized and
@@ -33,7 +34,8 @@ This userscript spoilers forum topics which contain certain filter words or phra
 0.95f / 2024-04-22: Typo fix in Derpi4U config id declaration.
                     Note that it means that the settings have been reset because of this, back them up before updating.
 0.95e / 2024-04-21: Fixed the script sharing config id with my other scripts.
-0.95d / 2024-04-20: Replaced Derpi4U library with a fork that supports multiline text areas; split the filter words with newline;
+0.95d / 2024-04-20: Replaced Derpi4U library with a fork that supports multiline text areas;
+                    Split the filter words with newline;
                     Resetting the settings to default first things first is highly recommended.
 0.95c / 2024-02-19: Figured out how to use a single textbox for all the filter words.
 0.95b / 2024-02-18: Added Marker's Derpi4U script/library for the settings userface.
@@ -59,6 +61,7 @@ This userscript spoilers forum topics which contain certain filter words or phra
 ```
 
 ### Considered future features:
+- An option to hide filtered threads completely or with a placeholder (possibly as a separate script).
 - ~~Word escapes so you can make filter exceptions ("No NSFW" topics etc.).~~ Implemented as of version 1.1.
 - ~~Expand compatibility to other Philomena boards (I don't use any of them so I can't guarantee anything).~~ Implemented as of version 1.2.
 - ~~Profile pages support~~ - done as of 1.0.
