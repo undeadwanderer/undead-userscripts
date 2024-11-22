@@ -24,7 +24,7 @@ This userscript spoilers forum topics which contain certain filter words or phra
 ### Change Log:
 ```
 1.2   / 2024-07-05: The script now runs on any Philomena-powered booru (that identifies as such in the html code);
-                    Also did some code clean-up and added more comments.
+                    Also did some code clean-up and added more comments. [Upd. 2024-11-22 Might roll back this one [sometime later] because I need to figure out how to avoid Derpi4U initializing on sites other from Philomena-based.]
 1.1   / 2024-05-22: Added a setting for words or phrases to exclude from filtering
                     ("Escape words" setting in Derpi4U or escapeWords variable in the legacy script).
 1.00  / 2024-04-26: A complete code rewrite - the script is now much more optimized and
