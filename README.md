@@ -9,7 +9,7 @@ Open the script code and click "raw", your script manager should recognize it. I
 
 ### Scripts in this repo:
 
-- **tabun-filters** — Post and comment filters for the MLP fansite tabun.everypony.ru. Fork of an abandoned userscript by CAHCET. See the script's folder for more information.
+- **tabun-filters** — Post and comment filters for the Russian MLP "blog platform" tabun.everypony.ru. Fork of an abandoned userscript by CAHCET. See the script's folder for more information.
 
 - **eqd-page-title-cleanup** — Retitles Equestria Daily's pages for convenience.
 
