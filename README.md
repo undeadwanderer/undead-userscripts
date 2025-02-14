@@ -2,22 +2,22 @@
 Some attempts at JS code for various MLP fansites (mostly Derpibooru but also EQD and Tabun) I either made back in early 2018 (Basically baby's first scripts) or resumed making recently.
 
 ### License:
-Everything except for **tabun-filters** is under **Creative Commons BY-NC-SA 4.0**, **tabun-filters** is under **WTFPL** as of how the original coder left it.
+Everything except for **tabun-filters** is under **Creative Commons BY-NC-SA 4.0**, **tabun-filters** is under **WTFPL** in respect to how the original coder left it.
 
 ### Installation/updating:
-Open the script code and click "raw", your script manager should recognize it. I have yet to add autoupdate links into the code so you'll have to update the scripts manually for now. [upd.: Looks like Violentmonkey might fill in an update url when installing a script from the webpage so you might want to turn autoupdate of such a script off in case you need to edit the vars.]
+Open the script code and click "raw", your script manager should recognize it. I have yet to add autoupdate links into the code so you'll have to update the scripts manually for now. [upd.: Looks like Violentmonkey might fill in an update url when installing a script from the webpage so you might want to turn autoupdate of such a script off in case you need to edit the variables.]
 
 ### Scripts in this repo:
 
 - **tabun-filters** — Post and comment filters for the Russian MLP "blog platform" tabun.everypony.ru. Fork of an abandoned userscript by CAHCET. See the script's folder for more information.
 
-- **eqd-page-title-cleanup** — Retitles Equestria Daily's pages for convenience.
+- **eqd-page-title-cleanup** — Retitles Equestria Daily's pages for convenience and better bookmarking.
 
 - **derpibooru-search-reverse** — An experimental script for Derpibooru that adds a button that reverses the sort order of the current image list while saving the current page's relative position in the list. Works with the main image list, tags, activity page, search results and galleries. Basically dusted off one of my beginner studies and made a bunch of fixes and improvements to get it working with the current version of the site.
 
-- **derpibooru-forum-filter** — Spoilers forum topics with "NSFW" (or any other words you don't wish to see) in the title on Derpibooru. Refer to the script's folder for more information. [Upd. 2024-02-18: Due to as of now using Mark Taiwan's gui library for the settings, `might probably need Violentmonkey to run properly if you're on Firefox`. Said settings can be found in the "Userscripts" tab on the Settings page.]
+- **derpibooru-forum-filter** — Spoilers forum topics with "NSFW" (by default, you can customize with other words you don't wish to see) in the title on Derpibooru. Refer to the script's folder for more information. [Upd. 2024-02-18: Due to as of now using Mark Taiwan's gui library for the settings, `might probably need Violentmonkey to run properly if you're on Firefox`. Said settings can be found in the "Userscripts" tab on the Settings page.]
 
-  - **〃-derpi4u-legacy** — A version of the script above that uses the original gui library instead of my fork.
+  - **〃-derpi4u-legacy** — A version of the script above that uses the original D4U library instead of my fork.
   - **〃-legacy** — A version of the scripts above that doesn't require any libraries, the filter words array is editable in the code.
 
 - **derpibooru-upload-tag** — Automatically fills in tags and description of your choice on the image upload page on Derpibooru, as of now uses Mark Taiwan's library so the note on the script above applies.
