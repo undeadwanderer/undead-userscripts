@@ -14,7 +14,7 @@ The original author distributed it under the WTFPL license and I'm not changing 
 ### Features: 
 
 * Filter by blog: Either: a) Open the blog list (/blogs) and check blogs you don't like under the "Фильтровать" column; b) Open the blog's page and click the "Фильтровать блог" button in its description.
-* Filter by user: Open the user profile and in the right column there are gonna be two radio switches, for comments (options to hide all comments or only images in comments) and for blog posts. Hidden comments can be shown or downvoted (I kinda want to remove the latter feature however since I consider it too toxic on the creator's part).
+* Filter by user: Open the user profile and in the right column there are gonna be two radio switches, for comments (options to hide all comments or only images in comments) and for blog posts.
 * Settings: In blog view, there's a link "Фильтры" in the right column, you can remove filtered blogs and users from there (in addition to the options above).
 
 ### Version history: 
