@@ -2,7 +2,7 @@
 // @name         Derpibooru Thread Filter legacy
 // @author       Undead_Wanderer
 // @description  An attempt to make the forums a little more worksafe by spoilering thread titles containing "NSFW". Made for personal use.
-// @version      1.2
+// @version      1.3
 // @namespace    https://derpibooru.org/profiles/Pink%2BAmena
 // @license      Creative Commons BY-NC-SA 4.0
 // @include      *
@@ -15,6 +15,7 @@ if (document.head.querySelector('meta[content="philomena"]')) {
 
     const markerWords = ["NSFW", "NFSW", "Not safe for work"]; // filter words
     const escapeWords = ['No NSFW'] // exclusion words
+    let mainHide = false; // Collapse topics on the main forums page completely when true.
     let spoiler = true;
     let x = document.querySelectorAll("a[href*='/forums/']"); // retrieve all forum link titles.
 
@@ -27,7 +28,12 @@ if (document.head.querySelector('meta[content="philomena"]')) {
                     }
                 });
                 if (spoiler) { // decide if the current string should be spoilered, if spoiler var is false reset it to true.
-                    i.innerHTML = '<span class="spoiler">' + i.innerHTML + '</span>';
+                    if (mainHide === true && window.location.pathname === "/forums") { // check if the current location is the main forums page and if the main page collapse option is enabled.
+                        let iParent = i.closest("td");
+                        iParent.innerHTML = "";
+                    } else {
+                        i.innerHTML = '<span class="spoiler">' + i.innerHTML + '</span>'; // If not, spoiler the thread name.
+                    }
                 } else {
                     spoiler = true;
                 }
