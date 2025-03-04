@@ -67,6 +67,7 @@ This userscript spoilers forum topics which contain certain filter words or phra
 ```
 
 ### Considered future features:
+- Some customization of how the placeholders are presented (spoiler filter word, do not spoiler filter word, hide filter word), maybe some other options.
 - ~~An option to hide filtered threads completely or with a placeholder (possibly as a separate script).~~ Implemented as of 1.4.
 - ~~Word escapes so you can make filter exceptions ("No NSFW" topics etc.).~~ Implemented as of version 1.1.
 - ~~Expand compatibility to other Philomena boards (I don't use any of them so I can't guarantee anything).~~ Implemented as of version 1.2.
