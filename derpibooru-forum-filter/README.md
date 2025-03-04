@@ -23,6 +23,10 @@ This userscript spoilers forum topics which contain certain filter words or phra
 
 ### Change Log:
 ```
+1.4   / 2025-03-05: • !NEW! You can now choose how to filter the forums:
+                            with title spoilers, replaced by placeholders or hidden completely.
+                            An independent option to hide all filtered topics on the main page is still available.
+                    • Bugfix - At some point derpi4u-legacy version got my fork linked in @require instead of Marker's original.
 1.3   / 2025-03-04: Implemented an option to collapse filtered thread topics completely when on the main forums page.
 1.2   / 2024-07-05: The script now runs on any Philomena-powered booru (that identifies as such in the html code);
                     Also did some code clean-up and added more comments. [Upd. 2024-11-22 Might roll back this one
@@ -63,7 +67,7 @@ This userscript spoilers forum topics which contain certain filter words or phra
 ```
 
 ### Considered future features:
-- An option to hide filtered threads completely or with a placeholder (possibly as a separate script).
+- ~~An option to hide filtered threads completely or with a placeholder (possibly as a separate script).~~ Implemented as of 1.4.
 - ~~Word escapes so you can make filter exceptions ("No NSFW" topics etc.).~~ Implemented as of version 1.1.
 - ~~Expand compatibility to other Philomena boards (I don't use any of them so I can't guarantee anything).~~ Implemented as of version 1.2.
 - ~~Profile pages support~~ - done as of 1.0.
