@@ -23,6 +23,7 @@ This userscript spoilers forum topics which contain certain filter words or phra
 
 ### Change Log:
 ```
+1.4.1 / 2025-03-05: • Small tweak: Put the main code into a function that gets called by "is this Philomena?" check.
 1.4   / 2025-03-05: • !NEW! You can now choose how to filter the forums:
                             with title spoilers, replaced by placeholders or hidden completely.
                             An independent option to hide all filtered topics on the main page is still available.
