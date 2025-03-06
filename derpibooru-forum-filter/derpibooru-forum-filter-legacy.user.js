@@ -2,7 +2,7 @@
 // @name         Derpibooru Thread Filter legacy
 // @author       Undead_Wanderer
 // @description  An attempt to make the forums a little more worksafe by spoilering thread titles containing "NSFW". Made for personal use.
-// @version      1.4.1
+// @version      1.4.1.1
 // @namespace    https://derpibooru.org/profiles/Pink%2BAmena
 // @license      Creative Commons BY-NC-SA 4.0
 // @include      *
@@ -16,7 +16,7 @@ function mainFunction () {
     const markerWords = ["NSFW", "NFSW", "Not safe for work"]; // filter words
     const escapeWords = ['No NSFW'] // exclusion words
     let mainHide = false; // Collapse topics on the main forums page completely when true.
-    let hideMethod = 0; // 0 - spoilered titles only, 1 - placeholders (clickable!), 3 - hide completely.
+    let hideMethod = 1; // 0 - spoilered titles only, 1 - stubs (clickable!), 3 - hide completely.
     let spoiler = true;
     let x = document.querySelectorAll("a[href*='/forums/']"); // retreive all forum link titles.
 
@@ -33,24 +33,24 @@ function mainFunction () {
                         let iParent = i.closest("td"); // parent table item for last post on forums main
                         if (mainHide === true || hideMethod === 2) { // check if the main forum page is set to nuke
                             iParent.innerHTML = "";                   // drop the nuke
-                        } else if (hideMethod === 1){               // else check if placeholder
-                            const a = iParent.innerHTML;     // save the parent node for later use in placeholders
-                            const c = '\<a class="show-hidden">(Show anyway?)</a>';     // buttons for revealing and closing placeholder-ed items
-                            const e = '\<a class="unsee-hidden">(Oh shi go back)</a>';
+                        } else if (hideMethod === 1){               // else check if stub
+                            const a = iParent.innerHTML;     // save the parent node for later use in stubs
+                            const c = '\<a class="show-hidden">(Show anyway?)</a>';     // buttons for revealing and closing stub-ed items
+                            const e = '• <a class="unsee-hidden">(Oh shi go back)</a>';
                             let g = '\<strong>Thread filtered</strong><div>(<span class="spoiler">' + arr[index] + '\</span>)</div><div>' + c + '<\/div>';
-                            // above var is placeholder text
-                            iParent.innerHTML = g; // replace the original data with placeholder
+                            // above var is stub text
+                            iParent.innerHTML = g; // replace the original data with stub
                             iParent.querySelector('.show-hidden').addEventListener("click", function() {seeHidden0(iParent, a, e, g)}); // "show hidden" button
                         }
                     } else if ((hideMethod === 2 || hideMethod === 1) && window.location.pathname.match(/\/forums\/.+(?!\/topics)/i)) { // checks if location is threadlist
                         let iParent1 = i.closest("tr"); // parent table item for last post on threadlist
                         if (hideMethod === 1) {      // check if placegholders are enabled
-                            const b = iParent1.innerHTML; // save the parent node for later use in placeholders
-                            const d = '\<a class="show-hidden">(Show anyway?)</a>';     // buttons for revealing and closing placeholder-ed items
+                            const b = iParent1.innerHTML; // save the parent node for later use in stubs
+                            const d = '\<a class="show-hidden">(Show anyway?)</a>';     // buttons for revealing and closing stub-ed items
                             const f = '\<a class="unsee-hidden">(Oh shi go back)</a>';
                             let h = '\<td class="table--communication-list__name"><div>Thread filtered (<span class="spoiler">' + arr[index] + '\</span>). </div><div class="small-text">' + d + '\</div</td><td class="table--communication-list__stats hide-mobile"></td><td class="table--communication-list__last-post"></td>';
-                            // above var is placeholder text
-                            iParent1.innerHTML = h; // enable placeholder
+                            // above var is stub text
+                            iParent1.innerHTML = h; // enable stub
                             iParent1.querySelector('.show-hidden').addEventListener("click", function() {seeHidden1(iParent1, b, f, h)}); // add event listener for revealing hidden thread; "function() {seeHidden(iParent1, b, f, h)}" is so we can carry the variables into the function without the link autoclicking.
 
                         } else {
@@ -69,7 +69,7 @@ function mainFunction () {
         }
     });
 
-    function unseeHidden0 (iParent, a, e, g) { // command the 'oh shi go back' button to revert to placeholder
+    function unseeHidden0 (iParent, a, e, g) { // command the 'oh shi go back' button to revert to stub
         iParent.innerHTML = g;
         iParent.querySelector('.show-hidden').addEventListener("click", function() {seeHidden0(iParent, a, e, g)});
     }
@@ -80,7 +80,7 @@ function mainFunction () {
         iParent.querySelector('.unsee-hidden').addEventListener("click", function() {unseeHidden0(iParent, a, e, g)});
     }
 
-    function unseeHidden1 (iParent1, b, f, h) { // command the 'oh shi go back' button to revert to placeholder
+    function unseeHidden1 (iParent1, b, f, h) { // command the 'oh shi go back' button to revert to stub
             iParent1.innerHTML = h;
             iParent1.querySelector('.show-hidden').addEventListener("click", function() {seeHidden1(iParent1, b, f, h)});
     }
