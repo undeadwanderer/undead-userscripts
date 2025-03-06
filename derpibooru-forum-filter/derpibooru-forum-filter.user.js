@@ -114,7 +114,7 @@ function mainFunction () {
         }
     });
 
-    function unseeHidden0 (iParent, a, e, g) { // command the 'oh shi go back' button to revert to placeholder
+    function unseeHidden0 (iParent, a, e, g) { // command the 'oh shi go back' button to revert to stub
         iParent.innerHTML = g;
         iParent.querySelector('.show-hidden').addEventListener("click", function() {seeHidden0(iParent, a, e, g)});
     }
@@ -125,7 +125,7 @@ function mainFunction () {
         iParent.querySelector('.unsee-hidden').addEventListener("click", function() {unseeHidden0(iParent, a, e, g)});
     }
 
-    function unseeHidden1 (iParent1, b, f, h) { // command the 'oh shi go back' button to revert to placeholder
+    function unseeHidden1 (iParent1, b, f, h) { // command the 'oh shi go back' button to revert to stub
             iParent1.innerHTML = h;
             iParent1.querySelector('.show-hidden').addEventListener("click", function() {seeHidden1(iParent1, b, f, h)});
     }

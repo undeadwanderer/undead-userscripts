@@ -23,7 +23,7 @@ This userscript spoilers forum topics which contain certain filter words or phra
 
 ### Change Log:
 ```
-1.4.4.1 / 2025-03-06: • Some text tweaks
+1.4.4.1 / 2025-03-06: • Some text tweaks.
 1.4.1   / 2025-03-05: • Small tweak: Put the main code into a function that gets called by "is this Philomena?" check.
 1.4 / 2025-03-05:     • !NEW! You can now choose how to filter the forums:
                               with title spoilers, replaced by stubs or hidden completely.
@@ -54,18 +54,18 @@ This userscript spoilers forum topics which contain certain filter words or phra
                       [currently only accessible by modifying the variable directly].
 0.94a / 2024-02-06:   Bugfix (script was not working on /forums page if any last post boxes are empty
                       (i.e. a post has been deleted)).
-0.94:               Added /activity; Small code rewrites; Updated class selector for Notifications.
-0.93a:              Bugfix (Anon posts in the sidebar still didn't work as intended in Firefox
-                    (plaintext code is enclosed in quotes in Opera but turned out not to be in FF)).
-0.93:               Bugfix for the sidebar and Notifications
-                    (the script didn't filter a thread if the last poster was anonymous).
-0.92:               Added Main page sidebar support [might be redundant because 'nsfw' seems to be filtered by default
-                    in the sidebar,might be useful for future keyword additions though].
-0.91:               Reworked the replacement function to remove redundant lines from the 'notifications page' part of the code.
-0.9:                Added Notifications page support.
-0.82:               Testing Notifications page support.
-0.81:               Code cleanup.
-0.8:                First fully working version; only board list and thread list pages are supported.
+0.94:                 Added /activity; Small code rewrites; Updated class selector for Notifications.
+0.93a:                Bugfix (Anon posts in the sidebar still didn't work as intended in Firefox
+                      (plaintext code is enclosed in quotes in Opera but turned out not to be in FF)).
+0.93:                 Bugfix for the sidebar and Notifications
+                      (the script didn't filter a thread if the last poster was anonymous).
+0.92:                 Added Main page sidebar support [might be redundant because 'nsfw' seems to be filtered by default
+                      in the sidebar,might be useful for future keyword additions though].
+0.91:                 Reworked the replacement function to remove redundant lines from the 'notifications page' part of the code.
+0.9:                  Added Notifications page support.
+0.82:                 Testing Notifications page support.
+0.81:                 Code cleanup.
+0.8:                  First fully working version; only board list and thread list pages are supported.
 ```
 
 ### Considered future features:
