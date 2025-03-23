@@ -3,11 +3,11 @@
 // @author      undead_wanderer
 // @namespace   https://derpibooru.org/profiles/Pink%2BAmena
 // @description New image links with less tags.
-// @version     1.1.3 / 2024-05-27
+// @version     1.1.3.1
 // @license     Creative Commons BY-NC-SA 4.0
 // @include     /^https?://(www\.)?(derpi|trixie)booru\.org/.*$/
 // @include     https://ronxgr5zb4dkwdpt.onion/*
-// @require     https://raw.githubusercontent.com/undeadwanderer/Derpibooru-Unified-Userscript-Ui/master/derpi-four-u.js
+// @require     https://raw.githubusercontent.com/undeadwanderer/Derpibooru-Unified-Userscript-Ui/master/derpi-four-u.js?v1.2.5
 // @inject-into content
 // @grant       none
 // ==/UserScript==

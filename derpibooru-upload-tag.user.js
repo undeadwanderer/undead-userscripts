@@ -2,12 +2,12 @@
 // @name         Derpibooru upload page customization
 // @author       undead_wanderer
 // @description  Automatically adds tags and description of your choosing on the image upload page. Made for personal use.
-// @version      0.8.2 | 2024-06-12
+// @version      0.8.2.1 | 2024-06-12
 // @namespace    https://derpibooru.org/profiles/Pink%2BAmena
 // @license      CC BY-NC-SA 4.0
 // @include      /^https?://(www\.)?(derpi|trixie)booru\.org/(images/new|settings/edit)/
 // @include      /^https?://ronxgr5zb4dkwdpt\.onion/(images/new|settings/edit)/
-// @require      https://raw.githubusercontent.com/undeadwanderer/Derpibooru-Unified-Userscript-Ui/master/derpi-four-u.js
+// @require      https://raw.githubusercontent.com/undeadwanderer/Derpibooru-Unified-Userscript-Ui/master/derpi-four-u.js?v1.2.5
 // @inject-into  content
 // @grant        none
 

@@ -2,11 +2,11 @@
 // @name         Derpibooru Thread Filter
 // @author       Undead_Wanderer
 // @description  An attempt to make the forums a little more worksafe by spoilering thread titles containing "NSFW". Made for personal use.
-// @version      1.4.2
+// @version      1.4.2.1
 // @namespace    https://derpibooru.org/profiles/Pink%2BAmena
 // @license      Creative Commons BY-NC-SA 4.0
 // @include      *
-// @require      https://raw.githubusercontent.com/undeadwanderer/Derpibooru-Unified-Userscript-Ui/master/derpi-four-u.js
+// @require      https://raw.githubusercontent.com/undeadwanderer/Derpibooru-Unified-Userscript-Ui/master/derpi-four-u.js?v1.2.5
 // @inject-into  content
 // @grant        none
 
@@ -80,7 +80,7 @@ function mainFunction () {
                         } else if (hideMethod === 'p'){               // else check if stub
                             const a = iParent.innerHTML;     // save the parent node for later use in stubs
                             const c = '\<a class="show-hidden">(Show anyway?)</a>';     // buttons for revealing and closing placeholder-ed items
-                            const e = '• <a class="unsee-hidden">(Oh shi go back)</a>';
+                            const e = '• <a class="unsee-hidden">(Hide)</a>';
                             let g = '\<strong>Thread filtered</strong><div>(<span class="spoiler">' + arr[index] + '\</span>)</div><div>' + c + '<\/div>';
                             // above var is stub text
                             iParent.innerHTML = g; // replace the original data with the stub
@@ -91,7 +91,7 @@ function mainFunction () {
                         if (hideMethod === 'p') {      // check if placegholders are enabled
                             const b = iParent1.innerHTML; // save the parent node for later use in stubs
                             const d = '\<a class="show-hidden">(Show anyway?)</a>';     // buttons for revealing and closing stub-ed items
-                            const f = '• <a class="unsee-hidden">(Oh shi go back)</a>';
+                            const f = '• <a class="unsee-hidden">(Hide)</a>';
                             let h = '\<td class="table--communication-list__name"><div>Thread filtered (<span class="spoiler">' + arr[index] + '\</span>). </div><div class="small-text">' + d + '\</div</td><td class="table--communication-list__stats hide-mobile"></td><td class="table--communication-list__last-post"></td>';
                             // above var is stub text
                             iParent1.innerHTML = h; // enable stub
@@ -108,7 +108,7 @@ function mainFunction () {
                         } else if (hideMethod === 'p') {      // check if placegholders are enabled
                             const j = iParent2.innerHTML; // save the parent node for later use in stubs
                             const l = '\<a class="show-hidden">(Show anyway?)</a>';     // buttons for revealing and closing stub-ed items
-                            const n = '• <a class="unsee-hidden small-text">(Oh shi go back)</a>';
+                            const n = '• <a class="unsee-hidden small-text">(Hide)</a>';
                             let p = 'Thread filtered (<span class="spoiler">' + arr[index] + '\</span>). <span class="small-text">' + l + '\</span>';
                             // above var is stub text
                             iParent2.innerHTML = p; // enable stub
@@ -134,7 +134,7 @@ function mainFunction () {
         }
     });
 
-    function unseeHidden0 (iParent, a, e, g) { // command the 'oh shi go back' button to revert to stub
+    function unseeHidden0 (iParent, a, e, g) { // command the 'Hide' button to revert to stub
         iParent.innerHTML = g;
         iParent.querySelector('.show-hidden').addEventListener("click", function() {seeHidden0(iParent, a, e, g)});
     }
@@ -145,7 +145,7 @@ function mainFunction () {
         iParent.querySelector('.unsee-hidden').addEventListener("click", function() {unseeHidden0(iParent, a, e, g)});
     }
 
-    function unseeHidden1 (iParent1, b, f, h) { // command the 'oh shi go back' button to revert to stub
+    function unseeHidden1 (iParent1, b, f, h) { // command the 'Hide' button to revert to stub
             iParent1.innerHTML = h;
             iParent1.querySelector('.show-hidden').addEventListener("click", function() {seeHidden1(iParent1, b, f, h)});
     }
@@ -156,7 +156,7 @@ function mainFunction () {
         iParent1.querySelector('.unsee-hidden').addEventListener("click", function() {unseeHidden1(iParent1, b, f, h)});
     }
 
-    function unseeHidden2 (iParent2, j, n, p) { // command the 'oh shi go back' button to revert to stub
+    function unseeHidden2 (iParent2, j, n, p) { // command the 'Hide' button to revert to stub
         iParent2.innerHTML = p;
         iParent2.querySelector('.show-hidden').addEventListener("click", function() {seeHidden2(iParent2, j, n, p)});
     }
