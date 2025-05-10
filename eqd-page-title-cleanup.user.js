@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name        EQD Page Title Cleanup
-// @description Moves the obstructive "Equestria Daily - MLP Stuff!:" from the beginning of the page title to its end.
+// @description Retitles Equestria Daily pages for better browsing and bookmarking
 // @author      undead_wanderer
-// @namespace   https://derpibooru.org/profiles/Sullen
-// @include     /https?:\/\/(www\.)?equestriadaily.com\/.*/
-// @version     1.0.0
+// @namespace   https://github.com/undeadwanderer/
+// @match       https://www.equestriadaily.com/*
+// @match       https://equestriadaily.com/*
+// @version     1.0.1
+// @license     Creative Commons BY-NC-SA 4.0
 // @grant       none
 // ==/UserScript==
 
