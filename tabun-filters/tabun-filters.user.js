@@ -4,9 +4,14 @@
 // @namespace      com.sunset-shimmer.tabun
 // @description    Ignores for blogs and comments
 // @require        https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js
-// @include        /https?://tabun\.everypony\.(ru|org|info|com|online)/.*/
+// @match          https://tabun.everypony.ru/*
+// @match          https://tabun.everypony.org/*
+// @match          https://tabun.everypony.info/*
+// @match          https://tabun.everypony.com/*
+// @match          https://tabun.everypony.online/*
 // @match          https://tabun.me/*
-// @version        1.17.2
+// @version        1.17.3
+// @license        WTFPL
 // @grant          GM_getValue
 // @grant          GM_setValue
 // @run-at         document-start
@@ -20,7 +25,7 @@ if (document.location.pathname === '/filters/' ||
 var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 var myObserver = new MutationObserver(mutationHandler);
 var obsConfig = { childList: true, characterData: false, attributes: false, subtree: true };
-const excludedWindowsBlogs = /\/(blog\/(?!$|newall|discussed)|profile\/.*\/created).*/i; // URL regex for the hiding functions so they won't run on individual blogs or user profiles for filtered blogs
+const excludedWindowsBlogs = /\/((blog|index)\/(?!$|newall|discussed)|profile\/.*\/created).*/i; // URL regex for the hiding functions so they won't run on individual blogs or user profiles for filtered blogs
 const excludedWindowsAuthors = /\/(profile\/.*\/created.*|blog\/(.+\/)?\d+\.html)/i; // URL regex for the hiding functions so they won't run on user profiles for filtered profiles
 
 var blockedAuthors = GM_getValue("blockedAuthors", {});
@@ -90,10 +95,10 @@ Material.prototype.refresh = function (data) {
 		}
 	}
 };
-Material.prototype.checkblock = function () { 
+Material.prototype.checkblock = function () {
 	if (
-			(blockedBlogs.indexOf(this.meta.blog) !== -1 && excludedWindowsBlogs.test(window.location.pathname) === false) ||
-			(blockedAuthorsPosts[this.meta.author] === 1 && excludedWindowsAuthors.test(window.location.pathname) === false)
+			(blockedBlogs.indexOf(this.meta.blog) !== -1 && blockedAuthorsPosts[this.meta.author] !== 2 && excludedWindowsBlogs.test(window.location.pathname) === false) ||
+			(blockedAuthorsPosts[this.meta.author] === 1 && blockedAuthorsPosts[this.meta.author] !== 2 && excludedWindowsAuthors.test(window.location.pathname) === false)
 	) {
 		this.$el.hide();
 		return true;
@@ -208,7 +213,7 @@ function updateSteamArticles() {
 }
 
 function filterComments() {
-    
+
 	$(".comment").each(function () {
 		if (this.className.indexOf('is-filtered') === -1) {
             let hasAuthor = $(this).find('.comment-author');
@@ -472,6 +477,14 @@ function main() {
 			GM_setValue("blockedAuthorsPosts", blockedAuthorsPosts);
 		});
 
+		var $blockAuthor3 = $('<label><input type="radio" name="user-filter-posts" value="2"' + (blockedPosts === 2 ? "checked" : "") + '>&nbsp;Показывать все посты</label>');
+		$blockAuthor3.appendTo($liBlock);
+		$blockAuthor3.click(function () {
+			blockedAuthorsPosts = GM_getValue("blockedAuthorsPosts", {});
+			blockedAuthorsPosts[userName] = 2;
+			GM_setValue("blockedAuthorsPosts", blockedAuthorsPosts);
+		});
+
 	}
 
 	if (document.location.pathname.split('/')[1] === 'blogs') {
@@ -630,7 +643,7 @@ function renderSettings() {
   var $blockedAuthorsPosts = $('<ul><h4>Заблокированные авторы (посты):</h4></ul>');
 	$blockedAuthorsPosts.hide();
 	for (var author in blockedAuthorsPosts) {
-		if (blockedAuthorsPosts.hasOwnProperty(author)) {
+		if (blockedAuthorsPosts.hasOwnProperty(author) && blockedAuthorsPosts[author] === 1) {
 			$blockedAuthorsPosts.show();
 
 			var $li = $('<li><a href="/profile/' + author + '/" class="ls-user">' + author + '</a></li>');
@@ -654,6 +667,35 @@ function renderSettings() {
 		}
 	}
 	$blockedAuthorsPosts.appendTo($settings);
+	$settings.append('<br>');
+
+	var $unblockedAuthorsPosts = $('<ul><h4>Видимые всегда авторы (посты):</h4></ul>');
+	$unblockedAuthorsPosts.hide();
+	for (var author in blockedAuthorsPosts) {
+		if (blockedAuthorsPosts.hasOwnProperty(author) && blockedAuthorsPosts[author] === 2) {
+			$unblockedAuthorsPosts.show();
+
+			var $li = $('<li><a href="/profile/' + author + '/" class="ls-user">' + author + '</a></li>');
+			$li.appendTo($unblockedAuthorsPosts);
+
+			var $del = $("<span class='actions'>&nbsp;[x]</span>");
+			$del.css({
+				'cursor': 'pointer'
+			});
+			$del.click(function () {
+				var userName = $(this).prev().text().trim();
+				blockedAuthorsPosts[userName] = undefined;
+				delete blockedAuthorsPosts[userName];
+				GM_setValue("blockedAuthorsPosts", blockedAuthorsPosts);
+
+				$(this).parent().remove();
+			});
+
+			$li.append($del);
+
+		}
+	}
+	$unblockedAuthorsPosts.appendTo($settings);
 	$settings.append('<br>');
 
 
