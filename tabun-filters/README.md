@@ -27,7 +27,7 @@ The original author distributed it under the WTFPL license and I'm not changing 
                      Fixed the last "filter comments" radiobox breaking the storage for the setting's variables.
                      Added a check to the comments filter function for the author field actually existing
                      (to prevent a specific error appearing if a comment has been deleted).
-                     Commented out the code concerning the "downvote hidden comment" functionality
+                     Commented out the code concerning the "punish hidden comment" functionality
                      (you can decomment them if you so want but I think it's too toxic a feature to have).
 1.17.1 | 2024-03-28: Included new Tabun domains.
 1.17   | 2024-03-16: Added buttons to filter a blog from the respective blog's description
