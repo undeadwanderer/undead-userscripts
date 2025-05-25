@@ -11,7 +11,7 @@ Open the script code and click "raw", your script manager should recognize it. I
 
 - `tabun-filters` — Post and comment filters for the Russian MLP "blog platform" tabun.everypony.ru. Fork of an abandoned userscript by CAHCET. See the script's folder for more information.
 
-- `eqd-page-title-cleanup` — Retitles Equestria Daily's pages for convenience and better bookmarking.
+- `eqd-page-title-cleanup` — A simple Equestria Daily pages retitle for more convenient browsing and bookmarking.
 
 - `derpibooru-search-reverse` — An experimental script for Derpibooru that adds a button that reverses the sort order of the current image list while saving the current page's relative position in the list. Works with the main image list, tags, activity page, search results and galleries. Basically dusted off one of my beginner studies and made a bunch of fixes and improvements to get it working with the current version of the site.
 
