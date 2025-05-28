@@ -15,7 +15,7 @@ Open the script code and click "raw", your script manager should recognize it. I
 
 - `derpibooru-search-reverse` — An experimental script for Derpibooru that adds a button that reverses the sort order of the current image list while saving the current page's relative position in the list. Works with the main image list, tags, activity page, search results and galleries. Basically dusted off one of my beginner studies and made a bunch of fixes and improvements to get it working with the current version of the site.
 
-- `derpibooru-forum-filter` — Spoilers forum topics with "NSFW" (by default, you can customize with other words you don't wish to see) in the title on Derpibooru. Refer to the script's folder for more information. [Upd. 2024-02-18: Due to as of now using Mark Taiwan's gui library for the settings, `might probably need Violentmonkey to run properly if you're on Firefox`. Said settings can be found in the "Userscripts" tab on the Settings page.]
+- `derpibooru-forum-filter` — Spoilers forum topics with "NSFW" (by default, you can customize with other words you don't wish to see) in the title on Derpibooru and/or other Philomena-powered image boorus. Refer to the script's folder for more information. [Upd. 2024-02-18: Due to as of now using Mark Taiwan's gui library for the settings, `might probably need Violentmonkey to run properly if you're on Firefox`. Said settings can be found in the "Userscripts" tab on the Settings page.]
 
   - `〃-derpi4u-legacy` — A version of the script above that uses the original D4U library instead of my fork.
   - `〃-legacy` — A version of the scripts above that doesn't require any libraries, the filter words array is editable in the code.
