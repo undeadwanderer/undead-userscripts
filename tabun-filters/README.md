@@ -9,7 +9,7 @@ A userscript for filtering blog posts and comments on the My Little Pony fansite
 This is a fork of an old script by CAHCET who abandoned it back in 2016.
 
 ### License:
-The original author distributed it under the WTFPL license and I'm not changing that (for now, at least).
+The original author distributed it under the WTFPL license and I do not intend to change that (for now, at least).
 
 ### Features: 
 
@@ -52,7 +52,7 @@ The original author distributed it under the WTFPL license and I'm not changing 
 Форк давно заброшенного скрипта за авторством САНСЕТ.
 
 ### Лицензия:
-WTFPL (делайте что хотите), автор оставил код под этой лицензией и я не буду это менять (по крайней мере, пока).
+WTFPL (делайте что хотите), САНСЕТ оставила код под этой лицензией и я не собираюсь это менять (по крайней мере, пока).
 
 ### Функции:
 
