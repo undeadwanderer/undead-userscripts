@@ -23,7 +23,9 @@ This userscript spoilers forum topics which contain certain filter words or phra
 
 ### Change Log:
 ```
-1.4.4.1 / 2025-03-06: • Some text tweaks.
+1.4.2.1 / 2025-03-23  • Version-locked the Derpi4U requirements for the scripts using it. Some flavor text tweaks.
+1.4.2 / 2025-03-08:   • Added "stub" and "hide" options for the activity sidebar. 
+1.4.1.1 / 2025-03-06: • Some flavor text tweaks.
 1.4.1   / 2025-03-05: • Small tweak: Put the main code into a function that gets called by "is this Philomena?" check.
 1.4 / 2025-03-05:     • !NEW! You can now choose how to filter the forums:
                               with title spoilers, replaced by stubs or hidden completely.

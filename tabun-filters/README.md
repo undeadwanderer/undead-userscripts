@@ -6,10 +6,10 @@
 
 A userscript for filtering blog posts and comments on the My Little Pony fansite tabun.everypony.ru.
 
-This is a fork of an old script by CAHCET who abandoned it back in 2016.
+This is a fork (or continued maintenance) of an old script by CAHCET who abandoned it back in 2016.
 
 ### License:
-The original author distributed it under the WTFPL license and I'm not changing that (for now, at least).
+The original author distributed it under the WTFPL license and I do not intend to change that (for now, at least).
 
 ### Features: 
 
@@ -21,12 +21,13 @@ The original author distributed it under the WTFPL license and I'm not changing 
 ### Version history: 
 
 ```
-1.17.2 | 2024-07-17: Fixed the script not working on /blog page.
+1.17.3 | 2025-05-10: Added an option to exclude certain authors from the filter.
+1.17.2 | 2024-07-17: Fixed the script not working on the /blog page.
                      Fixed personal blog posts pages not being excepted.
                      Fixed the last "filter comments" radiobox breaking the storage for the setting's variables.
                      Added a check to the comments filter function for the author field actually existing
                      (to prevent a specific error appearing if a comment has been deleted).
-                     Commented out the code concerning the "downvote hidden comment" functionality
+                     Commented out the code concerning the "punish hidden comment" functionality
                      (you can decomment them if you so want but I think it's too toxic a feature to have).
 1.17.1 | 2024-03-28: Included new Tabun domains.
 1.17   | 2024-03-16: Added buttons to filter a blog from the respective blog's description
@@ -48,21 +49,22 @@ The original author distributed it under the WTFPL license and I'm not changing 
 
 Юзерскрипт для фильтрации комментариев и постов на брони-коллективном блоге Табуне.
 
-Форк давно заброшенного скрипта за авторством САНСЕТ.
+Форк/обновление давно заброшенного скрипта за авторством САНСЕТ.
 
 ### Лицензия:
-WTFPL (делайте что хотите), автор оставил код под этой лицензией и я не буду это менять (по крайней мере, пока).
+WTFPL (делайте что хотите), САНСЕТ оставила код под этой лицензией и я не собираюсь это менять (по крайней мере, пока).
 
 ### Функции:
 
 * Фильтр блогов: Либо: a) В списке блогов (/blogs) отметьте блоги которые вам не нравятся (чекбоксы в колонке "Фильтровать"); b) перейдите на страницу блога и в описании кликните кнопку "Фильтровать блог".
-* Фильтр пользователей: На профиле пользователя в правой колонке есть два переключателя, для комментариев (опции "Показывать всё", "Скрывать картинки в комментариях", "Скрывать комментарии") и постов (опции "Показывать посты, "Скрывать посты").
+* Фильтр пользователей: На профиле пользователя в правой колонке есть два переключателя, для комментариев (опции "Показывать всё", "Скрывать картинки в комментариях", "Скрывать комментарии") и постов (опции "Показывать посты, "Скрывать посты", "Показывать все посты").
 * Скрытые посты скрываются полностью (но показываются на странице соответствующего блога/юзера), скрытые комменты спрятаны за плашкой где можно открыть содержание коммента.
 * Настройки: В общем виде в правой колонке есть ссылка "Фильтры", через неё вы можете убрать отфильтрованные блоги и пользователей (в добавок к опциям выше).
 
 ### Ченджлог: 
 
 ```
+1.17.3 | 2025-05-10: Добавил опцию исключения авторов из фильтра (отображаются все их посты).
 1.17.2 | 2024-07-17: Починил неактивацию скрипта на странице /blog.
                      Отключил активацию скрипта на блогпостах из персонального блога.
                      Починил поломку опцией скрытия комментариев значений хранилища для соответствующей переменной.
