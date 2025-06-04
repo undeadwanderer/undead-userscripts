@@ -3,7 +3,7 @@
 // @author      undead_wanderer
 // @namespace   https://derpibooru.org/profiles/Pink%2BAmena
 // @description New image links with less tags.
-// @version     1.1.3.1
+// @version     1.1.4
 // @license     Creative Commons BY-NC-SA 4.0
 // @include     /^https?://(www\.)?(derpi|trixie)booru\.org/.*$/
 // @include     https://ronxgr5zb4dkwdpt.onion/*
@@ -120,7 +120,7 @@ if (window.location.pathname.match(/(\/images)?\/\d+/i) !== null) {
         Rest: ''
     };
     const uploadDate = document.querySelector('time[datetime]').getAttribute('datetime').match(/\d\d\d\d-\d\d-\d\d/)[0].split(/-0?/);
-    const tagList = document.querySelectorAll('span[class="tag dropdown"]');
+    const tagList = document.querySelectorAll('.tag.dropdown');
 
     for (let x of tagList) {
     const tagId = x.dataset.tagSlug;
