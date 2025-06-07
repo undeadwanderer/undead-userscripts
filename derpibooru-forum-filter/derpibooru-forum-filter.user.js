@@ -2,7 +2,7 @@
 // @name         Derpibooru Thread Filter
 // @author       Undead_Wanderer
 // @description  An attempt to make the forums a little more worksafe by spoilering thread titles containing "NSFW". Made for personal use.
-// @version      1.4.2.1
+// @version      1.4.2.2
 // @namespace    https://derpibooru.org/profiles/Pink%2BAmena
 // @license      Creative Commons BY-NC-SA 4.0
 // @include      *
@@ -167,6 +167,8 @@ function mainFunction () {
         iParent2.querySelector('.unsee-hidden').addEventListener("click", function() {unseeHidden2(iParent2, j, n, p)});
     }
 }
-if (document.head.querySelector('meta[content="philomena"]')) {
-    mainFunction();
+if (document.querySelector('div#serving_info')) {
+    if (document.querySelector('div#serving_info').innerHTML.toLowerCase().match('philomena')) {
+        mainFunction();
+    }
 }
