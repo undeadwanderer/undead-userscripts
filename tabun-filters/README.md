@@ -11,12 +11,12 @@ This is a fork (or continued maintenance) of an old script by CAHCET who abandon
 ### License:
 The original author distributed it under the WTFPL license and I do not intend to change that (for now, at least).
 
-### Features: 
+### Features/Usage: 
 
-* Filter by blog: Either: a) Open the blog list (/blogs) and check blogs you don't like under the "Фильтровать" column; b) Open the blog's page and click the "Фильтровать блог" button in its description.
-* Filter by user: Open the user profile and in the right column there are gonna be two radio switches, for comments (options to hide all comments or only images in comments) and for blog posts.
+* Filter by blog: Either: a) Open the blog list (/blogs) and check blogs you don't like under the `Фильтровать` column; b) Open the blog's page and click the `Фильтровать блог` button in its description.
+* Filter by user: Open the user profile and in the right sidebar there are gonna be two new radio switches, for comments (options to hide all comments or only images in comments) and for blog posts.
 * Blog posts are hidden completely but will be displayed if you open the blog or user's page. Comments are hidden with a stub from which you can view the comment again.
-* Settings: In blog view, there's a link "Фильтры" in the right column, you can remove filtered blogs and users from there (in addition to the options above).
+* Settings: In blog view, there's a link `Фильтры` in the right column, you can remove filtered blogs and users from there (in addition to the options above).
 
 ### Version history: 
 
@@ -56,10 +56,10 @@ WTFPL (делайте что хотите), САНСЕТ оставила код
 
 ### Функции:
 
-* Фильтр блогов: Либо: a) В списке блогов (/blogs) отметьте блоги которые вам не нравятся (чекбоксы в колонке "Фильтровать"); b) перейдите на страницу блога и в описании кликните кнопку "Фильтровать блог".
-* Фильтр пользователей: На профиле пользователя в правой колонке есть два переключателя, для комментариев (опции "Показывать всё", "Скрывать картинки в комментариях", "Скрывать комментарии") и постов (опции "Показывать посты, "Скрывать посты", "Показывать все посты").
+* Фильтр блогов: Либо: a) В списке блогов `/blogs` отметьте блоги которые вам не нравятся (чекбоксы в колонке `Фильтровать`); b) перейдите на страницу блога и в описании кликните кнопку `Фильтровать блог`.
+* Фильтр пользователей: На профиле пользователя в правой колонке есть два переключателя, для комментариев (опции `Показывать всё`, `Скрывать картинки в комментариях`, `Скрывать комментарии`) и постов (опции `Показывать посты`, `Скрывать посты`, `Показывать все посты`).
 * Скрытые посты скрываются полностью (но показываются на странице соответствующего блога/юзера), скрытые комменты спрятаны за плашкой где можно открыть содержание коммента.
-* Настройки: В общем виде в правой колонке есть ссылка "Фильтры", через неё вы можете убрать отфильтрованные блоги и пользователей (в добавок к опциям выше).
+* Настройки: В общем виде в правой колонке есть ссылка `Фильтры`, через неё вы можете убрать отфильтрованные блоги и пользователей (в добавок к опциям выше).
 
 ### Ченджлог: 
 
