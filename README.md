@@ -40,7 +40,7 @@ Example config tab:
 ![Example screenshot of the userscripts settings tab](https://github.com/undeadwanderer/undead-userscripts/assets/51511863/5d2b0d27-4772-4eb5-a778-11398236384a)
 
 
-### Credits:
+### Credits/Thanks:
 
 - [Mark Taiwan a.k.a Marker](https://github.com/marktaiwan) for the `Derpibooru Unified Userscript UI Utility` library.
 - [Rene_Z](https://github.com/ReneZeidler) and [stsyn](https://github.com/stsyn) for the `Tag Suggestions` userscript; I referenced the code while making the current version of `derpibooru-upload-tag`.
