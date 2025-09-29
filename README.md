@@ -44,5 +44,5 @@ Example config tab:
 
 - [Mark Taiwan a.k.a Marker](https://github.com/marktaiwan) for the `Derpibooru Unified Userscript UI Utility` library.
 - [Rene_Z](https://github.com/ReneZeidler) and [stsyn](https://github.com/stsyn) for the `Tag Suggestions` userscript (I referenced the code while making the current version of `derpibooru-upload-tag`).
-- CAHCET for the original version of `Tabun Filters`.
+- [CAHCET](https://tabun.everypony.ru/profile/CAHCET) for the original version of `Tabun Filters`.
 - Stack Overflow for all the general advice.
