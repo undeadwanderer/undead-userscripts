@@ -9,8 +9,9 @@
 // @match          https://tabun.everypony.info/*
 // @match          https://tabun.everypony.com/*
 // @match          https://tabun.everypony.online/*
+// @match          https://tabun.everypony.me/*
 // @match          https://tabun.me/*
-// @version        1.17.3
+// @version        1.17.4
 // @license        WTFPL
 // @grant          GM_getValue
 // @grant          GM_setValue
@@ -129,7 +130,7 @@ Article.prototype.getMeta = function () {
 	try {
 		return {
 			'blog': this.$el.find(".topic-blog").attr('href').split('/').slice(-2)[0],
-			'author': this.$el.find("a[rel^=author]").text(),
+			'author': this.$el.find(".nickname.bold").text(),
 			'title': this.$el.find(".topic-title").text(),
 			'time': this.$el.find("time").attr('datetime')
 		};
@@ -156,7 +157,7 @@ StreamArticle.prototype.getId = function () {
 StreamArticle.prototype.getMeta = function () {
 	return {
 		'blog': this.$el.find(".stream-blog").attr('href').split('/').slice(-2)[0],
-		'author': this.$el.find("a[rel^=author]").text()
+		'author': this.$el.find(".nickname.bold").text()
 	};
 };
 
