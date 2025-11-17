@@ -21,6 +21,8 @@ The original author distributed it under the WTFPL license and I do not intend t
 ### Version history: 
 
 ```
+1.17.4 | 2025-11-17: Added a match for the `tabun.everypony.me` mirror
+                     Fix for filtering blogs by author
 1.17.3 | 2025-05-10: Added an option to exclude certain authors from the filter.
 1.17.2 | 2024-07-17: Fixed the script not working on the /blog page.
                      Fixed personal blog posts pages not being excepted.
