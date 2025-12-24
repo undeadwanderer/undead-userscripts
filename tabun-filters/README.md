@@ -21,6 +21,7 @@ The original author distributed it under the WTFPL license and I do not intend t
 ### Version history: 
 
 ```
+1.17.5 | 2025-12-24: Fixed comment hiding (hopefully).
 1.17.4 | 2025-11-17: Added a match for the "tabun.everypony.me" mirror.
                      Fix for filtering blog posts by author (they changed some selectors).
 1.17.3 | 2025-05-10: Added an option to exclude certain authors from the filter.
@@ -66,6 +67,7 @@ WTFPL (делайте что хотите), САНСЕТ оставила код
 ### Ченджлог: 
 
 ```
+1.17.5 | 2025-12-24: Починил скрытие комментов (надеюсь).
 1.17.4 | 2025-11-17: Добавил поддержку зеркала tabun.everypony.me.
                      Починил фильтрацию постов по авторам (они поменяли селектор).
 1.17.3 | 2025-05-10: Добавил опцию исключения авторов из фильтра (отображаются все их посты).
