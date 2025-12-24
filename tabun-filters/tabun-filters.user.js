@@ -11,7 +11,7 @@
 // @match          https://tabun.everypony.online/*
 // @match          https://tabun.everypony.me/*
 // @match          https://tabun.me/*
-// @version        1.17.4
+// @version        1.17.5
 // @license        WTFPL
 // @grant          GM_getValue
 // @grant          GM_setValue
@@ -217,7 +217,7 @@ function filterComments() {
 
 	$(".comment").each(function () {
 		if (this.className.indexOf('is-filtered') === -1) {
-            let hasAuthor = $(this).find('.comment-author');
+            let hasAuthor = $(this).find('.nickname');
             if (hasAuthor.text() !== null){ // check that the comment wasn't deleted to prevent errors
                 var author = hasAuthor.text().trim();
                 // var id = $(this).data('id');
