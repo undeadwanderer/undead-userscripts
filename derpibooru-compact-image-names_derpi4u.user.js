@@ -3,7 +3,7 @@
 // @author      undead_wanderer
 // @namespace   https://derpibooru.org/profiles/Pink%2BAmena
 // @description New image links with less tags.
-// @version     1.1.4
+// @version     1.1.4.1
 // @license     Creative Commons BY-NC-SA 4.0
 // @include     /^https?://(www\.)?(derpi|trixie)booru\.org/.*$/
 // @include     https://ronxgr5zb4dkwdpt.onion/*
@@ -146,7 +146,7 @@ if (window.location.pathname.match(/(\/images)?\/\d+/i) !== null) {
     }
 
     let imageName = imageId + '_' + tags.Error + tags.Ratings + tags.Origin + tags.Characters + tags.Species + tags.MediaOfficial + tags.MediaFanmade + tags.Spoilers + tags.Rest;
-    imageName = imageName.slice(0, 150) + '.' + imageFormat;
+    imageName = imageName.slice(0, 150).replace('#','') + '.' + imageFormat;
     let viewLink = document.querySelector('a[title="View (tags in filename)"]');
     let downloadLink = document.querySelector('a[title="Download (tags in filename)"]');
     viewLink.href = 'https://derpicdn.net/img/view/' + uploadDate[0] + '/' + uploadDate[1] + '/' + uploadDate[2] + '/' + imageName;
