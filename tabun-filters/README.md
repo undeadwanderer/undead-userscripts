@@ -4,6 +4,8 @@
 
 ## English
 
+**Note: As of March 28 2026 Tabun update the script no longer works and i've no idea if i can fix it. Will look into it later.**
+
 A userscript for filtering blog posts and comments on the My Little Pony fansite tabun.everypony.ru.
 
 This is a fork (or continued maintenance) of an old script by CAHCET who abandoned it back in 2016.
@@ -49,6 +51,8 @@ The original author distributed it under the WTFPL license and I do not intend t
 
 ---
 ## Russian
+
+**Примечание: После апдейта табуна 28 марта 2026 г. скрипт не работает и я не знаю смогу ли починить его, может таки попробую но позже.**
 
 Юзерскрипт для фильтрации комментариев и постов на брони-коллективном блоге Табуне.
 
