@@ -9,9 +9,9 @@
 // @match          https://tabun.everypony.info/*
 // @match          https://tabun.everypony.com/*
 // @match          https://tabun.everypony.online/*
-// @match          https://tabun.everypony.me/*
 // @match          https://tabun.me/*
-// @version        1.17.5
+// @match          https://tabun.everypony.me/*
+// @version        1.17.6
 // @license        WTFPL
 // @grant          GM_getValue
 // @grant          GM_setValue
@@ -26,7 +26,7 @@ if (document.location.pathname === '/filters/' ||
 var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 var myObserver = new MutationObserver(mutationHandler);
 var obsConfig = { childList: true, characterData: false, attributes: false, subtree: true };
-const excludedWindowsBlogs = /\/((blog|index)\/(?!$|newall|discussed)|profile\/.*\/created).*/i; // URL regex for the hiding functions so they won't run on individual blogs or user profiles for filtered blogs
+const excludedWindowsBlogs = /\/((blog|index)\/(?!$|page|newall|discussed|top)|profile\/.*\/created).*/i; // URL regex for the hiding functions so they won't run on individual blogs or user profiles for filtered blogs
 const excludedWindowsAuthors = /\/(profile\/.*\/created.*|blog\/(.+\/)?\d+\.html)/i; // URL regex for the hiding functions so they won't run on user profiles for filtered profiles
 
 var blockedAuthors = GM_getValue("blockedAuthors", {});
@@ -129,7 +129,7 @@ Article.prototype.getId = function () {
 Article.prototype.getMeta = function () {
 	try {
 		return {
-			'blog': this.$el.find(".topic-blog").attr('href').split('/').slice(-2)[0],
+			'blog': this.$el.find(".blog-title-wrapper.blog-link").length > 0 ? this.$el.find(".blog-title-wrapper.blog-link").attr('href').split('/').slice(-2)[0] : 0,
 			'author': this.$el.find(".nickname.bold").text(),
 			'title': this.$el.find(".topic-title").text(),
 			'time': this.$el.find("time").attr('datetime')
@@ -435,7 +435,7 @@ function main() {
 		var $liBlock = $('<li class="user-filter-posts">');
 		$wrap.append($liBlock);
 
-		var $radioIgnore1 = $('<label><input type="radio" name="user-filter" value="0" ' + (!!ignoreType ? "" : "checked") + '>&nbsp;Показывать всё</label>');
+		var $radioIgnore1 = $('<label><input type="radio" name="user-filter" value="0" ' + (!!ignoreType ? "" : "checked") + '>&nbsp;Показывать комментарии</label>');
 		$radioIgnore1.appendTo($liIgnore);
 		$radioIgnore1.click(function () {
 			blockedAuthors = GM_getValue("blockedAuthors", {}); // failsafe for setting switching from multiple pages
