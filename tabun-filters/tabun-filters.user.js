@@ -11,7 +11,7 @@
 // @match          https://tabun.everypony.online/*
 // @match          https://tabun.me/*
 // @match          https://tabun.everypony.me/*
-// @version        1.17.6
+// @version        1.17.7
 // @license        WTFPL
 // @grant          GM_getValue
 // @grant          GM_setValue
@@ -289,7 +289,7 @@ function addBlogFiltersControls($root) {
 				$join.after($('<th class="cell-filter">Фильтровать</th>'));
 			}
 		} else {
-			var blogName = $join.parent().find(".blog-name").attr('href').split('/').slice(-2)[0];
+			var blogName = $join.parent().find(".blog-title-wrapper").attr('href').split('/').slice(-2)[0];
 			var checked = (blockedBlogs.indexOf(blogName) !== -1) ? "checked" : "";
 			var $checkbox = $('<input type="checkbox" ' + checked + ' />');
 

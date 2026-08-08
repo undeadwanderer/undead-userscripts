@@ -21,6 +21,7 @@ The original author distributed it under the WTFPL license and I do not intend t
 ### Version history: 
 
 ```
+1.17.7 | 2026-08-08: Fixed the blog list filter checkboxes
 1.17.6 | 2026-04-12: Fixed blog posts not hiding after March 28 site update
                      Fixed personal blog posts in feeds not hiding
                      Fixed "Top" feeds' posts not hiding
@@ -47,7 +48,7 @@ The original author distributed it under the WTFPL license and I do not intend t
 
 ### Possible future features:
 
-* Looking into filtering by tags but that's not gonna be easy since the original author removed all code concerning tag support when they abandoned it (and I didn't save an older version).
+* Looking into filtering by tags.
 * Got a vague idea to implement hiding individual posts by id.
 
 ---
@@ -70,6 +71,7 @@ WTFPL (делайте что хотите), САНСЕТ оставила код
 ### Ченджлог: 
 
 ```
+1.17.7 | 2026-08-08: Фикс чекбоксов в блоглисте
 1.17.6 | 2026-04-12: Фикс скрытия постов после обновления сайта 28 марта (ещё один новый селектор)
                      Фикс скрытия постов из персональных блогов в лентах
                      Фикс скрытия постов в "Top" лентах
@@ -95,5 +97,5 @@ WTFPL (делайте что хотите), САНСЕТ оставила код
 
 ### Возможные идеи на будущее:
 
-* Рассматриваю возможность сделать фильтрацию по тегам но т.к. авторка удалила из последней версии весь сопутствующий поддержке тегов код это будет непросто.
+* Рассматриваю возможность сделать фильтрацию по тегам.
 * Есть смутная идея научить скрипт фильтровать индивидуальные посты по id.
